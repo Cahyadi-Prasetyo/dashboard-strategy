@@ -43,4 +43,9 @@ export default defineNuxtConfig({
     },
 
     css: ["~/assets/css/main.css"],
+
+    build: {
+        // Fix SSR "document is not defined" for vue-echarts
+        transpile: ["vue-echarts", "echarts", "zrender"],
+    },
 });

@@ -188,7 +188,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import { formatNumber } from '~/utils/map-visuals';
+import { formatMapNumber as formatNumber } from '~/utils/map-visuals';
 
 
 const props = defineProps({

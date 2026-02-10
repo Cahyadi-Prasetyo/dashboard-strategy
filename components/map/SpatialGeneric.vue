@@ -411,7 +411,7 @@ import {
 import {
   getInfraIconSvg,
   getMarkerColor,
-  formatNumber,
+  formatMapNumber as formatNumber,
   getId,
   highlightMarkerInGroup,
   resetAllMarkers,

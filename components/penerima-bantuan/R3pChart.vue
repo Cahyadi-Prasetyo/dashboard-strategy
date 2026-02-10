@@ -92,6 +92,7 @@
                         </th>
                     </tr>
                 </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
                 <tr class="bg-orange-300">
                     <td class="px-6 py-2 text-center text-xs font-bold text-black border-r border-orange-300">(1)</td>
                     <td class="px-6 py-2 text-center text-xs font-bold text-black border-r border-orange-300">(2)</td>
@@ -104,7 +105,6 @@
                         ({{ index + 3 }})
                     </td>
                 </tr>
-                <tbody class="bg-white divide-y divide-gray-200">
                     <tr v-for="(wilayah, idx) in sortedDataPerWilayah" :key="idx" class="hover:bg-gray-50">
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 border-r border-gray-200">
                             {{ wilayah.id || '-' }}

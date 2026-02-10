@@ -44,7 +44,7 @@ export const getMarkerColor = (type: string, kerusakanId: any = null) => {
   return colors[type] || "#3b82f6";
 };
 
-export const formatNumber = (num: number) =>
+export const formatMapNumber = (num: number) =>
   new Intl.NumberFormat("id-ID", { maximumFractionDigits: 2 }).format(num);
 
 export const getId = (item: any) => {
