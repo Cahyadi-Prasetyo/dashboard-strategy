@@ -1,0 +1,30 @@
+{
+  "name": "dashboard-strategy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.15.0",
+    "@nuxt/ui": "^3.0.0",
+    "nuxt-auth-utils": "^0.5.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0",
+    "echarts": "^5.5.0",
+    "vue-echarts": "^7.0.0",
+    "chart.js": "^4.4.0",
+    "xlsx": "^0.18.5",
+    "exceljs": "^4.4.0",
+    "driver.js": "^1.3.0",
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "^3.15.0",
+    "typescript": "^5.7.0"
+  }
+}
