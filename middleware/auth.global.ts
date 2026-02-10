@@ -1,4 +1,11 @@
 export default defineNuxtRouteMiddleware(async (to) => {
+  // ============================================
+  // 🔓 AUTH DINONAKTIFKAN SEMENTARA
+  // Fokus development dashboard terlebih dahulu.
+  // Hapus 'return' di bawah untuk mengaktifkan kembali auth.
+  // ============================================
+  return;
+
   const config = useRuntimeConfig();
 
   if (String(config.public.maintenanceMode) === "true") {
