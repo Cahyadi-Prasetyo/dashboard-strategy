@@ -1,0 +1,610 @@
+[
+  {
+    "id":"1101",
+    "kabupaten":"SIMEULUE",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":2.6131151746,
+    "longitude":96.0856776427
+  },
+  {
+    "id":"1102",
+    "kabupaten":"ACEH SINGKIL",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":2.3489243267,
+    "longitude":97.8466127391
+  },
+  {
+    "id":"1103",
+    "kabupaten":"ACEH SELATAN",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":3.1633292457,
+    "longitude":97.4357160872
+  },
+  {
+    "id":"1104",
+    "kabupaten":"ACEH TENGGARA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":3.3691319859,
+    "longitude":97.6978166232
+  },
+  {
+    "id":"1105",
+    "kabupaten":"ACEH TIMUR",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.6286379234,
+    "longitude":97.628726034
+  },
+  {
+    "id":"1106",
+    "kabupaten":"ACEH TENGAH",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.5186737527,
+    "longitude":96.8773750292
+  },
+  {
+    "id":"1107",
+    "kabupaten":"ACEH BARAT",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.4559552188,
+    "longitude":96.1839219883
+  },
+  {
+    "id":"1108",
+    "kabupaten":"ACEH BESAR",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.3802142268,
+    "longitude":95.5146274
+  },
+  {
+    "id":"1109",
+    "kabupaten":"PIDIE",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.0560258006,
+    "longitude":96.0287136494
+  },
+  {
+    "id":"1110",
+    "kabupaten":"BIREUEN",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.0931861383,
+    "longitude":96.6068654064
+  },
+  {
+    "id":"1111",
+    "kabupaten":"ACEH UTARA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.0146151736,
+    "longitude":97.182619076
+  },
+  {
+    "id":"1112",
+    "kabupaten":"ACEH BARAT DAYA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":3.8243348401,
+    "longitude":96.8797849867
+  },
+  {
+    "id":"1113",
+    "kabupaten":"GAYO LUES",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":3.9821955757,
+    "longitude":97.3572102201
+  },
+  {
+    "id":"1114",
+    "kabupaten":"ACEH TAMIANG",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.2274032859,
+    "longitude":97.9774988946
+  },
+  {
+    "id":"1115",
+    "kabupaten":"NAGAN RAYA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.1591289962,
+    "longitude":96.5056485823
+  },
+  {
+    "id":"1116",
+    "kabupaten":"ACEH JAYA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.8318677734,
+    "longitude":95.6787959389
+  },
+  {
+    "id":"1117",
+    "kabupaten":"BENER MERIAH",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.7695830284,
+    "longitude":97.0049949267
+  },
+  {
+    "id":"1118",
+    "kabupaten":"PIDIE JAYA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.1247398384,
+    "longitude":96.2133575737
+  },
+  {
+    "id":"1171",
+    "kabupaten":"BANDA ACEH",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.5589137806,
+    "longitude":95.32709582
+  },
+  {
+    "id":"1172",
+    "kabupaten":"SABANG",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.8375995208,
+    "longitude":95.3058039874
+  },
+  {
+    "id":"1173",
+    "kabupaten":"LANGSA",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":4.4831755324,
+    "longitude":97.9818260288
+  },
+  {
+    "id":"1174",
+    "kabupaten":"LHOKSEUMAWE",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":5.164955523,
+    "longitude":97.1107808334
+  },
+  {
+    "id":"1175",
+    "kabupaten":"SUBULUSSALAM",
+    "provinsi":"ACEH",
+    "kdprov":"11",
+    "latitude":2.7337344086,
+    "longitude":97.9370635251
+  },
+  {
+    "id":"1201",
+    "kabupaten":"NIAS",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.0638819003,
+    "longitude":97.7272203549
+  },
+  {
+    "id":"1202",
+    "kabupaten":"MANDAILING NATAL",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":0.7683800214,
+    "longitude":99.3725740086
+  },
+  {
+    "id":"1203",
+    "kabupaten":"TAPANULI SELATAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.4976568011,
+    "longitude":99.2637389323
+  },
+  {
+    "id":"1204",
+    "kabupaten":"TAPANULI TENGAH",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.8273749095,
+    "longitude":98.6609248227
+  },
+  {
+    "id":"1205",
+    "kabupaten":"TAPANULI UTARA",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.9893229054,
+    "longitude":99.0667520992
+  },
+  {
+    "id":"1205",
+    "kabupaten":"TAPANULI UTARA`",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.0172698151,
+    "longitude":98.9992333143
+  },
+  {
+    "id":"1206",
+    "kabupaten":"TOBA SAMOSIR",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.379943022,
+    "longitude":99.265607432
+  },
+  {
+    "id":"1207",
+    "kabupaten":"LABUHANBATU",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.2785232463,
+    "longitude":100.0517675797
+  },
+  {
+    "id":"1208",
+    "kabupaten":"ASAHAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.8041983745,
+    "longitude":99.5602156041
+  },
+  {
+    "id":"1209",
+    "kabupaten":"SIMALUNGUN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.9782307144,
+    "longitude":99.0364520213
+  },
+  {
+    "id":"1210",
+    "kabupaten":"DAIRI",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.8433675167,
+    "longitude":98.2666117471
+  },
+  {
+    "id":"1211",
+    "kabupaten":"KARO",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.1195083054,
+    "longitude":98.3008409436
+  },
+  {
+    "id":"1212",
+    "kabupaten":"DELI SERDANG",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.4802364504,
+    "longitude":98.6949802029
+  },
+  {
+    "id":"1213",
+    "kabupaten":"LANGKAT",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.7118520597,
+    "longitude":98.2212819871
+  },
+  {
+    "id":"1214",
+    "kabupaten":"NIAS SELATAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":0.3208611256,
+    "longitude":98.1026452793
+  },
+  {
+    "id":"1215",
+    "kabupaten":"HUMBANG HASUNDUTAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.2692606192,
+    "longitude":98.5742641047
+  },
+  {
+    "id":"1216",
+    "kabupaten":"PAKPAK BHARAT",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.5504199324,
+    "longitude":98.2417608725
+  },
+  {
+    "id":"1217",
+    "kabupaten":"SAMOSIR",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.5587438366,
+    "longitude":98.7214766143
+  },
+  {
+    "id":"1218",
+    "kabupaten":"SERDANG BEDAGAI",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.365234848,
+    "longitude":99.0578653329
+  },
+  {
+    "id":"1219",
+    "kabupaten":"BATU BARA",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.2352150086,
+    "longitude":99.4726876677
+  },
+  {
+    "id":"1220",
+    "kabupaten":"PADANG LAWAS UTARA",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.5864351819,
+    "longitude":99.75289824
+  },
+  {
+    "id":"1221",
+    "kabupaten":"PADANG LAWAS",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.1405630155,
+    "longitude":99.8453995172
+  },
+  {
+    "id":"1222",
+    "kabupaten":"LABUHAN BATU SELATAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.8328986793,
+    "longitude":100.1403661759
+  },
+  {
+    "id":"1223",
+    "kabupaten":"LABUHAN BATU UTARA",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.4104839684,
+    "longitude":99.7559910129
+  },
+  {
+    "id":"1224",
+    "kabupaten":"NIAS UTARA",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.3144479434,
+    "longitude":97.3566120897
+  },
+  {
+    "id":"1225",
+    "kabupaten":"NIAS BARAT",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.0302351548,
+    "longitude":97.4908496224
+  },
+  {
+    "id":"1271",
+    "kabupaten":"SIBOLGA",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.7389595026,
+    "longitude":98.7860548631
+  },
+  {
+    "id":"1272",
+    "kabupaten":"TANJUNG BALAI",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.9640188571,
+    "longitude":99.7947162905
+  },
+  {
+    "id":"1273",
+    "kabupaten":"PEMATANGSIANTAR",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":2.9630312065,
+    "longitude":99.0592575544
+  },
+  {
+    "id":"1274",
+    "kabupaten":"TEBING TINGGI",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.3280249424,
+    "longitude":99.1556376993
+  },
+  {
+    "id":"1275",
+    "kabupaten":"MEDAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.6306097545,
+    "longitude":98.66796627
+  },
+  {
+    "id":"1276",
+    "kabupaten":"BINJAI",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":3.599652409,
+    "longitude":98.4889207163
+  },
+  {
+    "id":"1277",
+    "kabupaten":"PADANGSIDIMPUAN",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.3859386377,
+    "longitude":99.2853470337
+  },
+  {
+    "id":"1278",
+    "kabupaten":"GUNUNGSITOLI",
+    "provinsi":"SUMATERA UTARA",
+    "kdprov":"12",
+    "latitude":1.259937106,
+    "longitude":97.5973600799
+  },
+  {
+    "id":"1301",
+    "kabupaten":"KEPULAUAN MENTAWAI",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-1.8489636902,
+    "longitude":99.3364568984
+  },
+  {
+    "id":"1302",
+    "kabupaten":"PESISIR SELATAN",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-1.7372641328,
+    "longitude":100.8801781135
+  },
+  {
+    "id":"1303",
+    "kabupaten":"SOLOK",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.9609596468,
+    "longitude":100.8180101381
+  },
+  {
+    "id":"1304",
+    "kabupaten":"SIJUNJUNG",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.6867473072,
+    "longitude":101.0935597416
+  },
+  {
+    "id":"1305",
+    "kabupaten":"TANAH DATAR",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.4680412656,
+    "longitude":100.5817540984
+  },
+  {
+    "id":"1306",
+    "kabupaten":"PADANG PARIAMAN",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.5641539087,
+    "longitude":100.2283484519
+  },
+  {
+    "id":"1307",
+    "kabupaten":"AGAM",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.2523518308,
+    "longitude":100.1704258241
+  },
+  {
+    "id":"1308",
+    "kabupaten":"LIMA PULUH KOTA",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":0.027872929,
+    "longitude":100.5650457992
+  },
+  {
+    "id":"1309",
+    "kabupaten":"PASAMAN",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":0.3928150859,
+    "longitude":100.0877488184
+  },
+  {
+    "id":"1310",
+    "kabupaten":"SOLOK SELATAN",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-1.4093246258,
+    "longitude":101.2553307288
+  },
+  {
+    "id":"1311",
+    "kabupaten":"DHARMASRAYA",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-1.132510586,
+    "longitude":101.5512487738
+  },
+  {
+    "id":"1312",
+    "kabupaten":"PASAMAN BARAT",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":0.2046991797,
+    "longitude":99.690758423
+  },
+  {
+    "id":"1371",
+    "kabupaten":"PADANG",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.8975138018,
+    "longitude":100.4378792975
+  },
+  {
+    "id":"1372",
+    "kabupaten":"SOLOK",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.7822313574,
+    "longitude":100.629027465
+  },
+  {
+    "id":"1373",
+    "kabupaten":"SAWAHLUNTO",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.6518587243,
+    "longitude":100.7564413593
+  },
+  {
+    "id":"1374",
+    "kabupaten":"PADANG PANJANG",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.4706909311,
+    "longitude":100.4037353257
+  },
+  {
+    "id":"1375",
+    "kabupaten":"BUKITTINGGI",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.2997244771,
+    "longitude":100.3722630487
+  },
+  {
+    "id":"1376",
+    "kabupaten":"PAYAKUMBUH",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.2257999778,
+    "longitude":100.6321564118
+  },
+  {
+    "id":"1377",
+    "kabupaten":"PARIAMAN",
+    "provinsi":"SUMATERA BARAT",
+    "kdprov":"13",
+    "latitude":-0.6084963586,
+    "longitude":100.1380220599
+  }
+]

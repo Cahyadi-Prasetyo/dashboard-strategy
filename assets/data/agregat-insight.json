@@ -1,0 +1,321 @@
+{
+  "success": true,
+  "data": {
+    "meta": {
+      "indikator": {
+        "nama": "Jumlah Penduduk Berumur 5 Tahun ke Atas",
+        "deskripsi": "Data jumlah penduduk berusia 5 tahun ke atas berdasarkan Sensus Penduduk 2020",
+        "satuan": "Jiwa"
+      },
+      "dataset": {
+        "judul": "Jumlah Penduduk 5+",
+        "sumber": "Sensus Penduduk 2020 - Long Form",
+        "instansi": "BPS RI",
+        "frekuensi": "10 Tahunan",
+        "terakhir_diupdate": "2022-06-15T00:00:00.000Z"
+      },
+      "period": "2022"
+    },
+    "records": [
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": null,
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "5-9",
+          "nama": "5-9 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "L",
+          "nama": "Laki-laki"
+        },
+        "itemCategory3": {
+          "kode": "001",
+          "nama": "Tidak/Belum Sekolah"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 245000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": null,
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "5-9",
+          "nama": "5-9 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory3": {
+          "kode": "001",
+          "nama": "Tidak/Belum Sekolah"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 238000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": null,
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "10-14",
+          "nama": "10-14 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "L",
+          "nama": "Laki-laki"
+        },
+        "itemCategory3": {
+          "kode": "002",
+          "nama": "SD/MI"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 267000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "5-9",
+          "nama": "5-9 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "L",
+          "nama": "Laki-laki"
+        },
+        "itemCategory3": {
+          "kode": "001",
+          "nama": "Tidak/Belum Sekolah"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 45000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "5-9",
+          "nama": "5-9 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory3": {
+          "kode": "001",
+          "nama": "Tidak/Belum Sekolah"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 43000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "10-14",
+          "nama": "10-14 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "L",
+          "nama": "Laki-laki"
+        },
+        "itemCategory3": {
+          "kode": "002",
+          "nama": "SD/MI"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 48000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "10-14",
+          "nama": "10-14 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory3": {
+          "kode": "002",
+          "nama": "SD/MI"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 47000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "5-9",
+          "nama": "5-9 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "L",
+          "nama": "Laki-laki"
+        },
+        "itemCategory3": {
+          "kode": "001",
+          "nama": "Tidak/Belum Sekolah"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 52000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "5-9",
+          "nama": "5-9 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory3": {
+          "kode": "001",
+          "nama": "Tidak/Belum Sekolah"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 49000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "10-14",
+          "nama": "10-14 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "L",
+          "nama": "Laki-laki"
+        },
+        "itemCategory3": {
+          "kode": "002",
+          "nama": "SD/MI"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 56000,
+        "flag": 0
+      },
+      {
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "10-14",
+          "nama": "10-14 Tahun"
+        },
+        "itemCategory2": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory3": {
+          "kode": "002",
+          "nama": "SD/MI"
+        },
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 54000,
+        "flag": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "summary": {
+        "target": 15420,
+        "realisasi": 12850
+    },
+    "status_dokumen": [
+        { "value": 450, "name": "Open", "color": "#10b981" },
+        { "value": 12400, "name": "Submitted", "color": "#f59e0b" }
+    ],
+    "status_pencacahan": [
+        { "value": 12850, "name": "Berhasil Dicacah", "color": "#3b82f6" },
+        { "value": 2570, "name": "Tidak Berhasil Dicacah", "color": "#ef4444" }
+    ],
+    "progres_provinsi": [
+        { "provinsi": "Aceh", "target": 5000, "realisasi": 4200 },
+        { "provinsi": "Sumatera Utara", "target": 4500, "realisasi": 3800 },
+        { "provinsi": "Sumatera Barat", "target": 3000, "realisasi": 2900 },
+        { "provinsi": "Riau", "target": 1500, "realisasi": 1100 },
+        { "provinsi": "Jambi", "target": 1420, "realisasi": 850 }
+    ]
+}

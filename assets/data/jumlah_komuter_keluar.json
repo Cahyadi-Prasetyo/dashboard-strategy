@@ -1,0 +1,4763 @@
+{
+  "success": true,
+  "data": {
+    "meta": {
+      "dataset": {
+        "judul": "Jumlah Komuter Keluar Berdasarkan Jenis Kelamin",
+        "sumber": "SUPAS 2025",
+        "instansi": "Badan Pusat Statistik",
+        "frekuensi": "",
+        "terakhir_diupdate": "2026-01-18T09:16:08.000Z"
+      },
+      "sektor": {
+        "nama": "Sosial"
+      },
+      "period": "2025"
+    },
+    "records": [
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1102",
+          "nama": "KAB. ACEH SINGKIL"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 210,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1102",
+          "nama": "KAB. ACEH SINGKIL"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 228,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1102",
+          "nama": "KAB. ACEH SINGKIL"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 439,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1103",
+          "nama": "KAB. ACEH SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1595,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1103",
+          "nama": "KAB. ACEH SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 296,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1103",
+          "nama": "KAB. ACEH SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1892,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1104",
+          "nama": "KAB. ACEH TENGGARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 278,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1104",
+          "nama": "KAB. ACEH TENGGARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 118,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1104",
+          "nama": "KAB. ACEH TENGGARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 396,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1105",
+          "nama": "KAB. ACEH TIMUR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5274,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1105",
+          "nama": "KAB. ACEH TIMUR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3137,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1105",
+          "nama": "KAB. ACEH TIMUR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 8412,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1106",
+          "nama": "KAB. ACEH TENGAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1401,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1106",
+          "nama": "KAB. ACEH TENGAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 712,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1106",
+          "nama": "KAB. ACEH TENGAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2113,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1107",
+          "nama": "KAB. ACEH BARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 845,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1107",
+          "nama": "KAB. ACEH BARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 97,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1107",
+          "nama": "KAB. ACEH BARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 942,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 31881,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 24420,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1108",
+          "nama": "KAB. ACEH BESAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 56301,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1109",
+          "nama": "KAB. PIDIE"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1438,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1109",
+          "nama": "KAB. PIDIE"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 206,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1109",
+          "nama": "KAB. PIDIE"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1644,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1110",
+          "nama": "KAB. BIREUEN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4412,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1110",
+          "nama": "KAB. BIREUEN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3168,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1110",
+          "nama": "KAB. BIREUEN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 7580,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4499,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1883,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1111",
+          "nama": "KAB. ACEH UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 6382,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1113",
+          "nama": "KAB. GAYO LUES"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 83,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1113",
+          "nama": "KAB. GAYO LUES"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 37,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1113",
+          "nama": "KAB. GAYO LUES"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 120,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1114",
+          "nama": "KAB. ACEH TAMIANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3639,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1114",
+          "nama": "KAB. ACEH TAMIANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1641,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1114",
+          "nama": "KAB. ACEH TAMIANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5280,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1115",
+          "nama": "KAB. NAGAN RAYA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1953,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1115",
+          "nama": "KAB. NAGAN RAYA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1723,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1115",
+          "nama": "KAB. NAGAN RAYA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3676,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1117",
+          "nama": "KAB. BENER MERIAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 956,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1117",
+          "nama": "KAB. BENER MERIAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1046,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1117",
+          "nama": "KAB. BENER MERIAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2001,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1118",
+          "nama": "KAB. PIDIE JAYA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3025,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1118",
+          "nama": "KAB. PIDIE JAYA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1249,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1118",
+          "nama": "KAB. PIDIE JAYA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4273,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1173",
+          "nama": "KOTA LANGSA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4490,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1173",
+          "nama": "KOTA LANGSA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1922,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1173",
+          "nama": "KOTA LANGSA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 6412,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1174",
+          "nama": "KOTA LHOKSEUMAWE"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2293,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1174",
+          "nama": "KOTA LHOKSEUMAWE"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 898,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1174",
+          "nama": "KOTA LHOKSEUMAWE"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3192,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1175",
+          "nama": "KOTA SUBULUSSALAM"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 373,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1175",
+          "nama": "KOTA SUBULUSSALAM"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 153,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "11",
+          "nama": "ACEH"
+        },
+        "kd_kab": {
+          "kode": "1175",
+          "nama": "KOTA SUBULUSSALAM"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 526,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1201",
+          "nama": "KAB. NIAS"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1385,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1201",
+          "nama": "KAB. NIAS"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 990,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1201",
+          "nama": "KAB. NIAS"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2375,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1202",
+          "nama": "KAB. MANDAILING NATAL"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2137,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1202",
+          "nama": "KAB. MANDAILING NATAL"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2260,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1202",
+          "nama": "KAB. MANDAILING NATAL"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4397,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1203",
+          "nama": "KAB. TAPANULI SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4129,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1203",
+          "nama": "KAB. TAPANULI SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5662,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1203",
+          "nama": "KAB. TAPANULI SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 9792,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1204",
+          "nama": "KAB. TAPANULI TENGAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 13073,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1204",
+          "nama": "KAB. TAPANULI TENGAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 11215,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1204",
+          "nama": "KAB. TAPANULI TENGAH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 24288,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1205",
+          "nama": "KAB. TAPANULI UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 862,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1205",
+          "nama": "KAB. TAPANULI UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 298,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1205",
+          "nama": "KAB. TAPANULI UTARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1160,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1208",
+          "nama": "KAB. ASAHAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 18983,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1208",
+          "nama": "KAB. ASAHAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 8786,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1208",
+          "nama": "KAB. ASAHAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 27769,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1212",
+          "nama": "KAB. DELI SERDANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 106116,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1212",
+          "nama": "KAB. DELI SERDANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 49098,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1212",
+          "nama": "KAB. DELI SERDANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 155215,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1213",
+          "nama": "KAB. LANGKAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 17415,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1213",
+          "nama": "KAB. LANGKAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 10793,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1213",
+          "nama": "KAB. LANGKAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 28208,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1214",
+          "nama": "KAB. NIAS SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 183,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1214",
+          "nama": "KAB. NIAS SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 542,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1214",
+          "nama": "KAB. NIAS SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 725,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1215",
+          "nama": "KAB. HUMBANG HASUNDUTAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 427,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1215",
+          "nama": "KAB. HUMBANG HASUNDUTAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 294,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1215",
+          "nama": "KAB. HUMBANG HASUNDUTAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 722,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1216",
+          "nama": "KAB. PAKPAK BHARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 432,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1216",
+          "nama": "KAB. PAKPAK BHARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 304,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1216",
+          "nama": "KAB. PAKPAK BHARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 736,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1218",
+          "nama": "KAB. SERDANG BEDAGAI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 24385,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1218",
+          "nama": "KAB. SERDANG BEDAGAI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 16629,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1218",
+          "nama": "KAB. SERDANG BEDAGAI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 41014,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1219",
+          "nama": "KAB. BATU BARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 6229,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1219",
+          "nama": "KAB. BATU BARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3525,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1219",
+          "nama": "KAB. BATU BARA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 9754,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1271",
+          "nama": "KOTA SIBOLGA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3450,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1271",
+          "nama": "KOTA SIBOLGA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1901,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1271",
+          "nama": "KOTA SIBOLGA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5351,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1274",
+          "nama": "KOTA TEBING TINGGI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4026,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1274",
+          "nama": "KOTA TEBING TINGGI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1107,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1274",
+          "nama": "KOTA TEBING TINGGI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5133,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1275",
+          "nama": "KOTA MEDAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 32453,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1275",
+          "nama": "KOTA MEDAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 10271,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1275",
+          "nama": "KOTA MEDAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 42724,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1276",
+          "nama": "KOTA BINJAI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 19344,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1276",
+          "nama": "KOTA BINJAI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 7628,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1276",
+          "nama": "KOTA BINJAI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 26972,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1277",
+          "nama": "KOTA PADANG SIDEMPUAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3637,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1277",
+          "nama": "KOTA PADANG SIDEMPUAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1993,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "12",
+          "nama": "SUMATERA UTARA"
+        },
+        "kd_kab": {
+          "kode": "1277",
+          "nama": "KOTA PADANG SIDEMPUAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5629,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1302",
+          "nama": "KAB. PESISIR SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 699,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1302",
+          "nama": "KAB. PESISIR SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 0,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1302",
+          "nama": "KAB. PESISIR SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 699,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1303",
+          "nama": "KAB. SOLOK"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 10095,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1303",
+          "nama": "KAB. SOLOK"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 9411,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1303",
+          "nama": "KAB. SOLOK"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 19506,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1305",
+          "nama": "KAB. TANAH DATAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 11590,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1305",
+          "nama": "KAB. TANAH DATAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 7235,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1305",
+          "nama": "KAB. TANAH DATAR"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 18826,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1306",
+          "nama": "KAB. PADANG PARIAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 13362,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1306",
+          "nama": "KAB. PADANG PARIAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 7519,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1306",
+          "nama": "KAB. PADANG PARIAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 20881,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1307",
+          "nama": "KAB. AGAM"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 30013,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1307",
+          "nama": "KAB. AGAM"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 20820,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1307",
+          "nama": "KAB. AGAM"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 50833,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1308",
+          "nama": "KAB. LIMA PULUH KOTA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 12496,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1308",
+          "nama": "KAB. LIMA PULUH KOTA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 9528,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1308",
+          "nama": "KAB. LIMA PULUH KOTA"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 22024,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1309",
+          "nama": "KAB. PASAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1839,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1309",
+          "nama": "KAB. PASAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 271,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1309",
+          "nama": "KAB. PASAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2110,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1310",
+          "nama": "KAB. SOLOK SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 848,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1310",
+          "nama": "KAB. SOLOK SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 61,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1310",
+          "nama": "KAB. SOLOK SELATAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 910,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1312",
+          "nama": "KAB. PASAMAN BARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 885,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1312",
+          "nama": "KAB. PASAMAN BARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 237,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1312",
+          "nama": "KAB. PASAMAN BARAT"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1123,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1371",
+          "nama": "KOTA PADANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5296,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1371",
+          "nama": "KOTA PADANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2659,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1371",
+          "nama": "KOTA PADANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 7955,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1372",
+          "nama": "KOTA SOLOK"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3153,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1372",
+          "nama": "KOTA SOLOK"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1224,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1372",
+          "nama": "KOTA SOLOK"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4376,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1374",
+          "nama": "KOTA PADANG PANJANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1656,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1374",
+          "nama": "KOTA PADANG PANJANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 998,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1374",
+          "nama": "KOTA PADANG PANJANG"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2654,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1375",
+          "nama": "KOTA BUKITTINGGI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2887,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1375",
+          "nama": "KOTA BUKITTINGGI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 1218,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1375",
+          "nama": "KOTA BUKITTINGGI"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 4105,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1376",
+          "nama": "KOTA PAYAKUMBUH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5279,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1376",
+          "nama": "KOTA PAYAKUMBUH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2665,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1376",
+          "nama": "KOTA PAYAKUMBUH"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 7944,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1377",
+          "nama": "KOTA PARIAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L",
+          "nama": "Laki-Laki"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 3478,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1377",
+          "nama": "KOTA PARIAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "P",
+          "nama": "Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 2227,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      },
+      {
+        "indikator": {
+          "nama": "Jumlah Komuter",
+          "deskripsi": "-"
+        },
+        "kd_prov": {
+          "kode": "13",
+          "nama": "SUMATERA BARAT"
+        },
+        "kd_kab": {
+          "kode": "1377",
+          "nama": "KOTA PARIAMAN"
+        },
+        "kd_kec": null,
+        "kd_desa": null,
+        "itemCategory1": {
+          "kode": "L+P",
+          "nama": "Laki-Laki + Perempuan"
+        },
+        "itemCategory2": {
+          "kode": "2025",
+          "nama": "2025"
+        },
+        "itemCategory3": null,
+        "itemCategory4": null,
+        "itemCategory5": null,
+        "value": 5705,
+        "flag_agregasi": 1,
+        "flag_prapasca": null,
+        "flag_harian": null
+      }
+    ]
+  }
+}
