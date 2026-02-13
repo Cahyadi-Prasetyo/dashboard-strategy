@@ -337,8 +337,20 @@ const props = defineProps<{
   selectedWilayah: any;
 }>();
 
+interface IndicatorConfig {
+  id: number;
+  name: string;
+  datasetId: number;
+  keyword: string;
+  useDecimal: boolean;
+  aggregateKabupaten?: boolean;
+  useAggregatEndpoint?: boolean;
+  exactMatch?: boolean; // Optional property
+  filterProvinceLevel?: boolean; // Optional property
+}
+
 // Mapping indikator ke dataset ID
-const INDICATOR_DATASET_MAP = [
+const INDICATOR_DATASET_MAP: IndicatorConfig[] = [
   // {
   //     id: 1,
   //     name: "Hunian Rusak",
@@ -406,7 +418,8 @@ let fetchTimeout: ReturnType<typeof setTimeout> | null = null;
 const lastFetchKey = ref<string | null>(null);
 
 // Provinsi yang akan ditampilkan (exclude NASIONAL)
-const TARGET_PROVINCES = ["11", "12", "13"]; // Aceh, Sumut, Sumbar
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
+const TARGET_PROVINCES = DEFAULT_PROVINCE_IDS; // Kepulauan Riau (Default)
 
 // Icon mapping
 const getIconConfig = (indicatorName: string) => {
@@ -539,13 +552,15 @@ const fetchData = async () => {
           query: params,
         });
 
+        const respAny = response as any;
+
         if (
-          response &&
-          typeof response === "object" &&
-          "data" in response &&
-          response.success
+          respAny &&
+          typeof respAny === "object" &&
+          "data" in respAny &&
+          respAny.success
         ) {
-          const respWithData = response as {
+          const respWithData = respAny as {
             data: any;
             success: boolean;
           };

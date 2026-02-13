@@ -106,6 +106,7 @@
 </template>
 
 <script setup>
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
 useHead({
     title: "Pendataan",
 });
@@ -147,7 +148,7 @@ const regionIds = computed(() => {
     if (w.provinsi && w.provinsi.length > 0) return w.provinsi;
 
     // Default: Semua Provinsi (11, 12, 13)
-    return ["11", "12", "13"];
+    return DEFAULT_PROVINCE_IDS;
 });
 
 const locationDetails = computed(() => {

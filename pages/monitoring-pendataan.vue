@@ -422,6 +422,7 @@
 </template>
 
 <script setup>
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
 useHead({
     title: "Monitoring Pendataan",
 });
@@ -458,7 +459,7 @@ const currentRegionIds = computed(() => {
     if (w.kabupaten && w.kabupaten.length > 0) return w.kabupaten;
     if (w.provinsi && w.provinsi.length > 0) return w.provinsi;
 
-    return ["11", "12", "13"]; // Default ID
+    return DEFAULT_PROVINCE_IDS; // Default ID
 });
 
 const allIndicatorIds = [

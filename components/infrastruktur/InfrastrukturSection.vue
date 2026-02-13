@@ -131,7 +131,7 @@ const regionIds = computed(() => {
     if (w.kabupaten?.length) return w.kabupaten;
     if (w.provinsi?.length) return w.provinsi;
     // Default national fallback - common provinces in Sumatra
-    return ["11", "12", "13"];
+    return DEFAULT_PROVINCE_IDS;
 });
 
 // --- LOGIC: VIEW LEVEL DETECTION ---

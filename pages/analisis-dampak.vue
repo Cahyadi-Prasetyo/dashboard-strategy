@@ -115,6 +115,7 @@
 </template>
 
 <script setup>
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
 useHead({
     title: "Statistik Bencana",
 });
@@ -200,6 +201,6 @@ const locationDetails = computed(() => {
 onMounted(async () => {
     await nextTick();
     // Menggunakan array string ID sesuai logika FilterWilayah yang baru
-    selectedWilayah.value.provinsi = ["11", "12", "13"];
+    selectedWilayah.value.provinsi = DEFAULT_PROVINCE_IDS;
 });
 </script>

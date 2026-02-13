@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
 import { ref, onMounted, nextTick } from "vue";
 
 useHead({ title: "Peta Tematik Fullscreen" });
@@ -45,6 +46,6 @@ const wilayahSpatial = ref({
 onMounted(async () => {
   await nextTick();
   // Mock Data Wilayah (Sesuai kode lama)
-  wilayahSpatial.value.provinsi = ["11", "12", "13"];
+  wilayahSpatial.value.provinsi = DEFAULT_PROVINCE_IDS;
 });
 </script>

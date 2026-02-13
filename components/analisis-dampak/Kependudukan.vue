@@ -32,6 +32,7 @@
 </template>
 
 <script setup>
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
 definePageMeta({
     keepalive: {
         max: 10,
@@ -64,7 +65,7 @@ const regionIds = computed(() => {
     if (w.provinsi && w.provinsi.length > 0) return w.provinsi;
 
     // Default: Semua Provinsi (11, 12, 13)
-    return ["11", "12", "13"];
+    return DEFAULT_PROVINCE_IDS;
 });
 
 // --- FORMATTED LOCATION (LABEL) ---

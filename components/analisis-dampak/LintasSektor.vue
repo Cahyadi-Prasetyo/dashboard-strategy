@@ -165,7 +165,7 @@ function scrollToSection(sectionId) {
         });
     }
 }
-
+import { DEFAULT_PROVINCE_IDS } from "~/constants/region-config";
 // Scroll spy
 function handleScroll() {
     const refs = {
@@ -212,6 +212,6 @@ const regionIds = computed(() => {
     if (provinsi?.length > 0) return provinsi;
 
     // Default: Semua Provinsi (11, 12, 13)
-    return ["11", "12", "13"];
+    return DEFAULT_PROVINCE_IDS;
 });
 </script>
