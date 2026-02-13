@@ -40,22 +40,19 @@
                         penanganan darurat, rehabilitasi, dan rekonstruksi.
                     </p> -->
                     <p>
-                        Peta tematik bencana menyajikan perbandingan kondisi
+                        Peta tematik strategis menyajikan kondisi
                         wilayah
-                        <span class="font-semibold text-gray-800">sebelum</span>
-                        dan
-                        <span class="font-semibold text-gray-800">sesudah</span>
-                        bencana. Informasi yang ditampilkan mencakup hasil
-                        pendataan lapangan yang dipadankan dengan DTSEN,
-                        indikator statistik pada 5 sektor pemulihan, kondisi
-                        fisik wilayah, serta dampak bencana seperti area
-                        terdampak dan gangguan akses jalan.
+                        <span class="font-semibold text-gray-800">terkini</span>
+                        berdasarkan indikator-indikator utama pembangunan.
+                        Informasi yang ditampilkan mencakup indikator
+                        kependudukan, sosial, ekonomi, dan infrastruktur
+                        di Provinsi Kepulauan Riau.
                     </p>
 
                     <p>
-                        Peta ini juga dilengkapi dengan hasil analisis big data
-                        untuk memperkirakan infrastruktur dan desa terdampak
-                        sebagai dukungan awal pengambilan keputusan.
+                         Peta ini juga dilengkapi dengan visualisasi spasial
+                         interaktif untuk mendukung analisis kewilayahan
+                         yang lebih mendalam.
                     </p>
                 </div>
 
@@ -109,9 +106,7 @@
                                 <div class="flex flex-wrap gap-2">
                                     <span
                                         v-for="prov in [
-                                            'Aceh',
-                                            'Sumatera Barat',
-                                            'Sumatera Utara',
+                                            'Kepulauan Riau'
                                         ]"
                                         :key="prov"
                                         class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"

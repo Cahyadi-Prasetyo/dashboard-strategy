@@ -9,19 +9,18 @@
         <div class="lg:col-span-1 space-y-6">
           <div>
             <h3 class="text-2xl font-bold text-white leading-tight">
-              Data Tunggal <br />
-              <span class="text-amber-500">Pasca Bencana</span>
+              Dashboard Strategis <br />
+              <span class="text-amber-500">Kepulauan Riau</span>
             </h3>
             <p
               class="text-xs font-medium text-slate-500 mt-1 uppercase tracking-wider"
             >
-              Wilayah Sumatera
+              Provinsi Kepulauan Riau
             </p>
           </div>
           <p class="text-sm leading-relaxed text-slate-400">
-            Sistem integrasi data dan monitoring penanggulangan bencana untuk
-            mendukung pemulihan wilayah Aceh, Sumatera Barat, dan Sumatera
-            Utara.
+            Sistem integrasi data dan monitoring strategis untuk
+            mendukung pembangunan wilayah Kepulauan Riau.
           </p>
         </div>
 

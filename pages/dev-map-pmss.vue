@@ -375,7 +375,8 @@ const mapContainer = ref(null);
 let map = null;
 let L = null;
 
-// State
+const pageTitle = "Dashboard Strategis Kepulauan Riau";
+const mapData = "Data Wilayah Kepulauan Riau"; // State
 const activeLayers = ref([]);
 const logs = ref([]);
 

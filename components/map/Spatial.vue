@@ -5,7 +5,7 @@
     >
       <div class="flex items-center gap-4">
         <h2 class="text-base font-bold text-gray-800">
-          Peta Dampak Bencana Sumatera
+          Peta Dampak Bencana Kepulauan Riau
         </h2>
 
         <div v-if="viewMode === 'focus'" class="flex items-center gap-2">

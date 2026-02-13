@@ -274,107 +274,108 @@ export const additionalLayersConfig = [
   },
 ];
 
-export const pmssLayersConfig = [
-  {
-    group: "Desa Tematik (BPS)",
-    color: "bg-purple-500",
-    layers: [
-      {
-        id: "desa_pendataan",
-        name: "Desa Pendataan BPS-STIS",
-        layerName: "floodmap_sumatera_2025:desa_pendataan_bps-stis",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:desa_pendataan_bps-stis&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-      {
-        id: "desa_bencana",
-        name: "Desa Wilayah Bencana",
-        layerName: "floodmap_sumatera_2025:desa_wilayah_bencana",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:desa_wilayah_bencana&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-    ],
-  },
-  {
-    group: "Geotagging (BPS)",
-    color: "bg-orange-500",
-    layers: [
-      {
-        id: "infrastruktur_terdampak",
-        name: "Perkiraan Bangunan Infrastruktur",
-        layerName:
-          "floodmap_sumatera_2025:perkiraan_bangunan_infrastruktur_terdampak",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:perkiraan_bangunan_infrastruktur_terdampak&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-      {
-        id: "tempat_tinggal_terdampak",
-        name: "Perkiraan Tempat Tinggal",
-        layerName:
-          "floodmap_sumatera_2025:perkiraan_bangunan_tempat_tinggal_terdampak",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:perkiraan_bangunan_tempat_tinggal_terdampak&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-    ],
-  },
-  {
-    group: "Poligon Tambahan",
-    color: "bg-emerald-500",
-    layers: [
-      {
-        id: "prediksi_banjir",
-        name: "Prediksi Wilayah Banjir (BPS)",
-        layerName: "floodmap_sumatera_2025:prediksi_wilayah_banjir",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:prediksi_wilayah_banjir&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-      {
-        id: "lahan_baku_sawah",
-        name: "Lahan Baku Sawah (Kemen ATR/BPN)",
-        layerName: "floodmap_sumatera_2025:lahan_baku_sawah__lbs_",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:lahan_baku_sawah__lbs_&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-      //   {
-      //     id: "banjir",
-      //     name: "Area Banjir", // <--- PASTIIN INI 'name', BUKAN 'label'
-      //     // label: "Area Banjir", // <--- JANGAN PAKE INI
-      //     color: "#0284c7",
-      //     loader: () => import("~/assets/data/map/banjir.json"),
-      //   },
-    ],
-  },
-  {
-    // Curah Hujan BMKG section
-    group: "Curah Hujan (BMKG)",
-    color: "bg-blue-500",
-    layers: [
-      {
-        id: "prediksi_curah_hujan_februari_2026",
-        name: "Prediksi Curah Hujan Februari 2026",
-        layerName: "curah_hujan_bmkg:prediksi_curah_hujan_februari_2026__mm_",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=curah_hujan_bmkg:prediksi_curah_hujan_februari_2026__mm_&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-    ],
-  },
-  {
-    // Curah Hujan BMKG section
-    group: "Sungai (Kementerian PU)",
-    color: "bg-dark-blue-500",
-    layers: [
-      {
-        id: "sungai",
-        name: "Sungai",
-        layerName: "floodmap_sumatera_2025:inters_sungai_hutan_administrasi",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:inters_sungai_hutan_administrasi&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-    ],
-  },
-  {
-    // Curah Hujan BMKG section
-    group: "Kawasan Hutan (Kementerian Kehutanan)",
-    color: "bg-dark-green-500",
-    layers: [
-      {
-        id: "kawasan_hutan",
-        name: "Kawasan Hutan",
-        layerName: "floodmap_sumatera_2025:status_dan_fungsi_kawasan_hutan_sumut_sumbar_aceh",
-        url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:status_dan_fungsi_kawasan_hutan_sumut_sumbar_aceh&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
-      },
-    ],
-  },
-];
+// export const pmssLayersConfig = [
+//   {
+//     group: "Desa Tematik (BPS)",
+//     color: "bg-purple-500",
+//     layers: [
+//       {
+//         id: "desa_pendataan",
+//         name: "Desa Pendataan BPS-STIS",
+//         layerName: "floodmap_sumatera_2025:desa_pendataan_bps-stis",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:desa_pendataan_bps-stis&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//       {
+//         id: "desa_bencana",
+//         name: "Desa Wilayah Bencana",
+//         layerName: "floodmap_sumatera_2025:desa_wilayah_bencana",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:desa_wilayah_bencana&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//     ],
+//   },
+//   {
+//     group: "Geotagging (BPS)",
+//     color: "bg-orange-500",
+//     layers: [
+//       {
+//         id: "infrastruktur_terdampak",
+//         name: "Perkiraan Bangunan Infrastruktur",
+//         layerName:
+//           "floodmap_sumatera_2025:perkiraan_bangunan_infrastruktur_terdampak",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:perkiraan_bangunan_infrastruktur_terdampak&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//       {
+//         id: "tempat_tinggal_terdampak",
+//         name: "Perkiraan Tempat Tinggal",
+//         layerName:
+//           "floodmap_sumatera_2025:perkiraan_bangunan_tempat_tinggal_terdampak",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:perkiraan_bangunan_tempat_tinggal_terdampak&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//     ],
+//   },
+//   {
+//     group: "Poligon Tambahan",
+//     color: "bg-emerald-500",
+//     layers: [
+//       {
+//         id: "prediksi_banjir",
+//         name: "Prediksi Wilayah Banjir (BPS)",
+//         layerName: "floodmap_sumatera_2025:prediksi_wilayah_banjir",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:prediksi_wilayah_banjir&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//       {
+//         id: "lahan_baku_sawah",
+//         name: "Lahan Baku Sawah (Kemen ATR/BPN)",
+//         layerName: "floodmap_sumatera_2025:lahan_baku_sawah__lbs_",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:lahan_baku_sawah__lbs_&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//       //   {
+//       //     id: "banjir",
+//       //     name: "Area Banjir", // <--- PASTIIN INI 'name', BUKAN 'label'
+//       //     // label: "Area Banjir", // <--- JANGAN PAKE INI
+//       //     color: "#0284c7",
+//       //     loader: () => import("~/assets/data/map/banjir.json"),
+//       //   },
+//     ],
+//   },
+//   {
+//     // Curah Hujan BMKG section
+//     group: "Curah Hujan (BMKG)",
+//     color: "bg-blue-500",
+//     layers: [
+//       {
+//         id: "prediksi_curah_hujan_februari_2026",
+//         name: "Prediksi Curah Hujan Februari 2026",
+//         layerName: "curah_hujan_bmkg:prediksi_curah_hujan_februari_2026__mm_",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=curah_hujan_bmkg:prediksi_curah_hujan_februari_2026__mm_&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//     ],
+//   },
+//   {
+//     // Curah Hujan BMKG section
+//     group: "Sungai (Kementerian PU)",
+//     color: "bg-dark-blue-500",
+//     layers: [
+//       {
+//         id: "sungai",
+//         name: "Sungai",
+//         layerName: "floodmap_sumatera_2025:inters_sungai_hutan_administrasi",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:inters_sungai_hutan_administrasi&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//     ],
+//   },
+//   {
+//     // Curah Hujan BMKG section
+//     group: "Kawasan Hutan (Kementerian Kehutanan)",
+//     color: "bg-dark-green-500",
+//     layers: [
+//       {
+//         id: "kawasan_hutan",
+//         name: "Kawasan Hutan",
+//         layerName: "floodmap_sumatera_2025:status_dan_fungsi_kawasan_hutan_sumut_sumbar_aceh",
+//         url: "https://geoserver.bps.go.id/gwc/service/wmts?layer=floodmap_sumatera_2025:status_dan_fungsi_kawasan_hutan_sumut_sumbar_aceh&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}",
+//       },
+//     ],
+//   },
+// ];
+export const pmssLayersConfig = [];

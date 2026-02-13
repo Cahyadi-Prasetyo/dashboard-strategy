@@ -188,7 +188,7 @@
 import { ref, computed, onMounted, watch, onBeforeUnmount } from "vue";
 
 const props = defineProps({
-  defaultProvince: { type: String, default: "11" },
+  defaultProvince: { type: String, default: "21" },
   defaultKabkot: { type: String, default: null },
   floating: { type: Boolean, default: false },
   position: { type: String, default: "bottom-right" },
@@ -207,132 +207,28 @@ const selectedKabkot = ref(props.defaultKabkot || null);
 
 // Province & Kabkot Mapping
 const provinceMap = {
-  11: {
-    name: "Aceh",
+  21: {
+    name: "Kepulauan Riau",
     sampleDesa: [
-      "11.10.01.2001",
-      "11.01.01.2001",
-      "11.02.01.2001",
-      "11.03.01.2001",
-      "11.04.01.2003",
-      "11.05.01.2001",
-      "11.06.01.2001",
-      "11.07.03.2001",
-      "11.11.01.2001",
-      "11.08.01.2001",
-      "11.13.01.2001",
-      "11.16.01.2001",
-      "11.15.01.2003",
-      "11.17.01.2001",
-      "11.18.01.2001",
-      "11.74.01.2007",
-      "11.73.01.2002",
-      "11.75.01.2001",
-    ],
-  },
-  12: {
-    name: "Sumatera Utara",
-    sampleDesa: [
-      "12.04.05.2001",
-      "12.13.01.2001",
-      "12.03.01.1001",
-      "12.01.01.1001",
-      "12.02.01.1001",
-      "12.09.10.2001",
-      "12.07.01.2001",
-      "12.05.01.2002",
-      "12.14.01.2002",
-      "12.16.01.2002",
-      "12.15.01.2001",
-      "12.18.01.2001",
-      "12.19.01.1001",
-      "12.73.01.1001",
-      "12.76.01.1001",
-      "12.71.01.1001",
-      "12.75.01.1001",
-      "12.77.01.1001",
-    ],
-  },
-  13: {
-    name: "Sumatera Barat",
-    sampleDesa: [
-      "13.09.01.2007",
-      "13.01.01.2001",
-      "13.02.03.2001",
-      "13.04.01.2001",
-      "13.05.01.2001",
-      "13.06.01.2001",
-      "13.07.01.2001",
-      "13.08.04.2001",
-      "13.11.01.2001",
-      "13.12.01.2001",
-      "13.71.01.1001",
-      "13.72.01.1001",
-      "13.74.01.1001",
-      "13.75.01.1001",
-      "13.76.01.1002",
-      "13.77.01.1001",
+      "21.71.10.1001", // Batam Kota
+      "21.72.01.1001", // Tanjung Pinang Barat
+      "21.01.06.1001", // Bintan Timur
+      "21.02.02.1001", // Karimun
+      "21.03.07.1001", // Bunguran Timur (Natuna)
+      "21.04.01.1001", // Singkep (Lingga)
+      "21.05.01.1001", // Siantan (Anambas)
     ],
   },
 };
 const kabkotMap = {
-  // ACEH
-  1102: { name: "KAB. ACEH SINGKIL", sampleDesa: "11.10.01.2001" },
-  1103: { name: "KAB. ACEH SELATAN", sampleDesa: "11.01.01.2001" },
-  1104: { name: "KAB. ACEH TENGGARA", sampleDesa: "11.02.01.2001" },
-  1105: { name: "KAB. ACEH TIMUR", sampleDesa: "11.03.01.2001" },
-  1106: { name: "KAB. ACEH TENGAH", sampleDesa: "11.04.01.2001" },
-  1107: { name: "KAB. ACEH BARAT", sampleDesa: "11.05.01.2001" },
-  1108: { name: "KAB. ACEH BESAR", sampleDesa: "11.06.01.2001" },
-  1109: { name: "KAB. PIDIE", sampleDesa: "11.07.01.2001" },
-  1110: { name: "KAB. BIREUEN", sampleDesa: "11.11.01.2001" },
-  1111: { name: "KAB. ACEH UTARA", sampleDesa: "11.08.01.2001" },
-  1113: { name: "KAB. GAYO LUES", sampleDesa: "11.13.01.2001" },
-  1114: { name: "KAB. ACEH TAMIANG", sampleDesa: "11.16.01.2001" },
-  1115: { name: "KAB. NAGAN RAYA", sampleDesa: "11.15.01.2001" },
-  1117: { name: "KAB. BENER MERIAH", sampleDesa: "11.17.01.2001" },
-  1118: { name: "KAB. PIDIE JAYA", sampleDesa: "11.18.01.2001" },
-  1173: { name: "KOTA LANGSA", sampleDesa: "11.74.01.2001" },
-  1174: { name: "KOTA LHOKSEUMAWE", sampleDesa: "11.73.01.2001" },
-  1175: { name: "KOTA SUBULUSSALAM", sampleDesa: "11.75.01.2001" },
-
-  // SUMATERA UTARA
-  1201: { name: "KAB. NIAS", sampleDesa: "12.04.05.2001" },
-  1202: { name: "KAB. MANDAILING NATAL", sampleDesa: "12.13.01.2001" },
-  1203: { name: "KAB. TAPANULI SELATAN", sampleDesa: "12.03.01.1001" },
-  1204: { name: "KAB. TAPANULI TENGAH", sampleDesa: "12.01.01.1001" },
-  1205: { name: "KAB. TAPANULI UTARA", sampleDesa: "12.02.01.1001" },
-  1208: { name: "KAB. ASAHAN", sampleDesa: "12.09.10.2001" },
-  1212: { name: "KAB. DELI SERDANG", sampleDesa: "12.07.01.2001" },
-  1213: { name: "KAB. LANGKAT", sampleDesa: "12.05.01.2001" },
-  1214: { name: "KAB. NIAS SELATAN", sampleDesa: "12.14.01.2001" },
-  1215: { name: "KAB. HUMBANG HASUNDUTAN", sampleDesa: "12.16.01.2001" },
-  1216: { name: "KAB. PAKPAK BHARAT", sampleDesa: "12.15.01.2001" },
-  1218: { name: "KAB. SERDANG BEDAGAI", sampleDesa: "12.18.01.2001" },
-  1219: { name: "KAB. BATU BARA", sampleDesa: "12.19.01.1001" },
-  1271: { name: "KOTA SIBOLGA", sampleDesa: "12.73.01.1001" },
-  1274: { name: "KOTA TEBING TINGGI", sampleDesa: "12.76.01.1001" },
-  1275: { name: "KOTA MEDAN", sampleDesa: "12.71.01.1001" },
-  1276: { name: "KOTA BINJAI", sampleDesa: "12.75.01.1001" },
-  1277: { name: "KOTA PADANG SIDEMPUAN", sampleDesa: "12.77.01.1001" },
-
-  // SUMATERA BARAT
-  1301: { name: "KAB. KEPULAUAN MENTAWAI", sampleDesa: "13.09.01.2001" },
-  1302: { name: "KAB. PESISIR SELATAN", sampleDesa: "13.01.01.2001" },
-  1303: { name: "KAB. SOLOK", sampleDesa: "13.02.02.2001" },
-  1305: { name: "KAB. TANAH DATAR", sampleDesa: "13.04.01.2001" },
-  1306: { name: "KAB. PADANG PARIAMAN", sampleDesa: "13.05.01.2001" },
-  1307: { name: "KAB. AGAM", sampleDesa: "13.06.01.2001" },
-  1308: { name: "KAB. LIMA PULUH KOTA", sampleDesa: "13.07.01.2001" },
-  1309: { name: "KAB. PASAMAN", sampleDesa: "13.08.04.2001" },
-  1310: { name: "KAB. SOLOK SELATAN", sampleDesa: "13.11.01.2001" },
-  1312: { name: "KAB. PASAMAN BARAT", sampleDesa: "13.12.01.2001" },
-  1371: { name: "KOTA PADANG", sampleDesa: "13.71.01.1001" },
-  1372: { name: "KOTA SOLOK", sampleDesa: "13.72.01.1001" },
-  1374: { name: "KOTA PADANG PANJANG", sampleDesa: "13.74.01.1001" },
-  1375: { name: "KOTA BUKITTINGGI", sampleDesa: "13.75.01.1001" },
-  1376: { name: "KOTA PAYAKUMBUH", sampleDesa: "13.76.01.1001" },
-  1377: { name: "KOTA PARIAMAN", sampleDesa: "13.77.01.1001" },
+  // KEPULAUAN RIAU
+  2101: { name: "KAB. BINTAN", sampleDesa: "21.01.06.1001" },
+  2102: { name: "KAB. KARIMUN", sampleDesa: "21.02.02.1001" },
+  2103: { name: "KAB. NATUNA", sampleDesa: "21.03.07.1001" },
+  2104: { name: "KAB. LINGGA", sampleDesa: "21.04.01.1001" },
+  2105: { name: "KAB. KEPULAUAN ANAMBAS", sampleDesa: "21.05.01.1001" },
+  2171: { name: "KOTA BATAM", sampleDesa: "21.71.10.1001" },
+  2172: { name: "KOTA TANJUNG PINANG", sampleDesa: "21.72.01.1001" },
 };
 // Computed
 const kabkotOptions = computed(() => {

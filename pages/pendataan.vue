@@ -180,7 +180,7 @@ const locationDetails = computed(() => {
         label = "Provinsi";
     } else {
         return {
-            text: "Aceh, Sumatera Utara, Sumatera Barat",
+            text: "Kepulauan Riau",
             count: 0,
             showMore: false,
             items: [],

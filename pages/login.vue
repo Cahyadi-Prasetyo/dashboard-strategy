@@ -170,7 +170,7 @@
                   class="shimmer-text text-2xl font-extrabold leading-tight tracking-tight"
                   style="filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5))"
                 >
-                  Data Tunggal Pasca Bencana Sumatera
+                  Dashboard Strategis Kepulauan Riau
                 </h2>
               </div>
 

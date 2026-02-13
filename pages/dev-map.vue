@@ -1,7 +1,8 @@
+```
 <template>
   <div class="h-screen w-full flex flex-col relative">
     <div class="bg-white border-b p-4 shadow-sm z-10">
-      <h1 class="text-xl font-bold text-gray-800">Peta Wilayah Sumatera</h1>
+      <h1 class="text-xl font-bold text-gray-800">Peta Wilayah Kepulauan Riau</h1>
       <p class="text-sm text-gray-500">Visualisasi Batas Desa & Centroid</p>
     </div>
 

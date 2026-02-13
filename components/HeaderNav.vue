@@ -14,12 +14,12 @@
             <span
               class="font-bold text-gray-900 text-lg leading-tight tracking-tight"
             >
-              Data Tunggal
+              Dashboard Strategis
             </span>
             <span
               class="text-amber-600 text-xs font-bold uppercase tracking-widest"
             >
-              Bencana Sumatera
+              Kepulauan Riau
             </span>
           </div>
         </NuxtLink>

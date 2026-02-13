@@ -16,9 +16,8 @@
                 <h1
                     class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
                 >
-                    Dashboard <span class="text-yellow-400">Data Tunggal</span
-                    ><br />
-                    Bencana Sumatera
+                    Dashboard <span class="text-yellow-400">Strategis</span><br />
+                    Kepulauan Riau
                 </h1>
 
                 <p
@@ -29,12 +28,12 @@
                     penanggulangan bencana secara tepat sasaran dan responsif di
                     Wilayah Aceh, Sumatera Barat, dan Sumatera Utara. -->
 
-                    Dashboard Bencana Terintegrasi digunakan sebagai alat
+                    Dashboard Strategis Kepulauan Riau digunakan sebagai alat
                     integrasi data, pemantauan kondisi wilayah, dan evaluasi
-                    penanggulangan bencana secara tepat sasaran dan responsif
-                    melalui penyajian indikator perumahan dan pemukiman,
+                    pembangunan daerah secara tepat sasaran dan responsif
+                    melalui penyajian indikator strategis,
                     infrastruktur, ekonomi, sosial, serta lintas sektor.
-                    Dashboard ini memberikan gambaran kondisi wilayah terdampak
+                    Dashboard ini memberikan gambaran kondisi wilayah
                     secara komprehensif untuk mendukung pengambilan keputusan
                     dan koordinasi lintas instansi.
                 </p>
