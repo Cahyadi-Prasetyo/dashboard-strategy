@@ -39,55 +39,42 @@ Menyediakan fitur penginputan data yang **minimalis dan terkontrol**, khusus unt
 
 ---
 
-## 🔌 Integrasi API BPS
+## 🔌 Integrasi Eksternal & Keamanan Data (BPS WebAPI)
 
-Dashboard ini terhubung dengan **WebAPI BPS** untuk mengambil indikator strategis.
+Dashboard ini terhubung dengan **WebAPI BPS (Badan Pusat Statistik)** untuk menampilkan indikator strategis terkini. Interaksi dengan API pihak ketiga dilakukan melalui mekanisme **Server-side Proxy** untuk menjamin keamanan & integritas data.
 
--   **Endpoint**: `https://webapi.bps.go.id/v1/api/list/`
--   **Metode**: Server-side Proxy (via Nuxt Server Routes) untuk keamanan API Key dan transformasi data.
+## 🔐 Keamanan & Integritas Data
 
-**Parameter Kunci:**
--   `model`: `indicators`
--   `domain`: Kode Provinsi/Kabupaten (e.g., `21` untuk Kepri)
--   **Struktur Data unique**: Response API BPS menggunakan array campuran (Metadata di index 0, Data di index 1), yang akan dinormalisasi oleh backend dashboard sebelum dikirim ke frontend.
+Dashboard ini menerapkan standar keamanan **Zero-Trust** untuk melindungi data sensitif dan infrastruktur, khususnya dalam integrasi dengan sistem eksternal (BPS).
 
----
+### 1. Server-Side Processing
+Seluruh komunikasi dengan API pihak ketiga dilakukan melalui **Internal Proxy Server**. Tidak ada permintaan (request) yang dikirim langsung dari browser pengguna ke server data eksternal, sehingga :
+-   Melindungi **API Key/Credential** dari akses publik.
+-   Mencegah paparan struktur data internal.
 
-## 📂 Struktur Folder (High Level)
-
-```bash
-/components     # Komponen UI reusable (Charts, Maps, Cards)
-/composables    # Logic bisnis (useBpsApi, useRegion)
-/pages          # Halaman aplikasi (Routing otomatis Nuxt)
-/server         # API Routes & Proxy (Backend for Frontend)
-  /api
-    /bps        # Proxy endpoint untuk API BPS
-/public         # Aset statis (GeoJSON, Images)
-/constants      # Konfigurasi tetap (Region ID default, dll)
-```
+### 2. Environment Isolation
+Akses ke layanan eksternal dikonfigurasi menggunakan **Environment Variables** yang terenkripsi di level server. Pastikan server produksi memiliki konfigurasi yang sesuai untuk:
+-   `BPS_API_KEY`: Kunci akses layanan data.
+-   `BPS_API_BASE_URL`: Endpoint layanan data.
 
 ---
 
-## 📦 Instalasi & Pengembangan
+## � Panduan Deployment
 
-Pastikan Anda telah menginstal **Node.js** (LTS version).
+Dashboard ini dirancang untuk dijalankan di lingkungan modern yang mendukung **Node.js** atau containerization (Docker).
 
-```bash
-# 1. Install dependencies
-npm install
+### Prasyarat System
+-   **Runtime**: Node.js (LTS Version)
+-   **Package Manager**: NPM / Yarn / PNPM
 
-# 2. Setup Environment Variables
-cp .env.example .env
-# Isi BPS_API_KEY di dalam .env
-
-# 3. Jalankan Development Server
-npm run dev
-```
-
-Akses aplikasi di `http://localhost:3000`.
+### Instalasi
+1.  Unduh source code aplikasi.
+2.  Install dependensi sistem: `npm install`
+3.  Konfigurasi environment variable sesuai panduan keamanan.
+4.  Jalankan mode pengembangan: `npm run dev` atau build untuk produksi: `npm run build`.
 
 ---
 
-## 📝 Catatan Penting
--   **Default Region**: Dashboard dikonfigurasi secara default untuk wilayah **Kepulauan Riau (21)**. Konfigurasi ini diatur terpusat di `constants/region-config.ts`.
--   **Branching**: Gunakan branch `develop` untuk pengembangan aktif dan `feature/*` untuk fitur baru. Branch `main` digunakan untuk rilis produksi/stabil.
+## 📝 Catatan Pengembangan
+-   **Regional Config**: Sistem secara default dikonfigurasi untuk memantau wilayah **Kepulauan Riau**. Penyesuaian wilayah dapat dilakukan melalui konfigurasi global aplikasi.
+-   **Version Control**: Pengembangan dilakukan dengan alur kerja Git Flow standar (Main, Develop, Feature).
