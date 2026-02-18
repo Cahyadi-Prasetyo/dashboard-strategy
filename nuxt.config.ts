@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     ],
 
     runtimeConfig: {
+        bpsApiKey: process.env.BPS_API_KEY,
+        bpsApiBaseUrl: process.env.BPS_API_BASE_URL,
         public: {
             maintenanceMode: process.env.NUXT_PUBLIC_MAINTENANCE_MODE || "false",
         },

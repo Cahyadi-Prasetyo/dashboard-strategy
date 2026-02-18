@@ -5,11 +5,11 @@ export const MIN_ZOOM_LABEL = 7.5;
 // === KONFIGURASI VIEW PETA UTAMA ===
 export const MAP_VIEW_CONFIG = {
   bounds: [
-    [6.5, 60],
-    [-6.5, 120],
+    [7.5, 100], // Updated bounds for Kepri context (South China Sea)
+    [-2.5, 112],
   ],
-  initialCenter: [5.0, 97.4804],
-  initialZoom: 7,
+  initialCenter: [3.9456514, 108.142867], // Kepulauan Riau
+  initialZoom: 8,
   minZoom: 5,
   maxBoundsViscosity: 1.0,
 };
@@ -341,7 +341,10 @@ export const SPECIAL_DATASET_CONFIG = {
 /**
  * Get layer configuration based on mode and layer type
  */
-export const getLayerConfig = (mode, layerType) => {
+/**
+ * Get layer configuration based on mode and layer type
+ */
+export const getLayerConfig = (mode: string, layerType: string) => {
   const config = mode === "pasca" ? LAYER_CONFIG_PASCA : LAYER_CONFIG_PRA;
   return config[layerType] || null;
 };
@@ -349,13 +352,13 @@ export const getLayerConfig = (mode, layerType) => {
 /**
  * Get all layer types for a specific mode
  */
-export const getLayerTypes = (mode) => {
+export const getLayerTypes = (mode: string) => {
   return mode === "pasca" ? LAYER_TYPES_PASCA : LAYER_TYPES_PRA;
 };
 
 /**
  * Get full layer configuration for a mode
  */
-export const getFullLayerConfig = (mode) => {
+export const getFullLayerConfig = (mode: string) => {
   return mode === "pasca" ? LAYER_CONFIG_PASCA : LAYER_CONFIG_PRA;
 };
