@@ -7,7 +7,7 @@ export interface BPSIndicator {
 }
 
 export interface RegionData {
-    id: string; // Kode Wilayah (e.g., '2100' for Prov Kepri, '2101' for Kab Bintan)
+    id: string; // Kode Wilayah (e.g., '2100' for Prov Kepri)
     name: string;
     values: Record<string, number>; // Mapping indicator ID to value
 }

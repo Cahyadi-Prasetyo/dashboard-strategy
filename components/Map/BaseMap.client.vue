@@ -1,9 +1,9 @@
 <template>
-  <div id="map" class="h-full w-full z-0 relative bg-slate-100"></div>
+  <div ref="mapContainer" class="h-full w-full z-0 relative bg-slate-100"></div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, watch } from 'vue';
+import { onMounted, onUnmounted, watch, ref, nextTick } from 'vue';
 import maplibregl, { type Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { MOCK_REGION_DATA } from '~/constants/indicators';
@@ -14,6 +14,7 @@ import kepriGeoJson from '~/assets/data/kepri-district.json';
 
 const { selectedIndicatorId } = useDashboardState();
 const map = ref<Map | null>(null);
+const mapContainer = ref<HTMLElement | null>(null);
 
 // Function to get color based on value (Simple linear interpolation for now)
 // In a real app, use chroma.js or similar
@@ -33,14 +34,16 @@ const updateMapLayer = () => {
   const indicatorId = selectedIndicatorId.value;
   
   // Extract values to find min/max for scale
-  const values = Object.values(MOCK_REGION_DATA).map(r => r.values[indicatorId] || 0);
+  // Cast to specific type if needed or let inference work by accessing safely
+  const regionValues = Object.values(MOCK_REGION_DATA);
+  const values = regionValues.map((r: any) => r.values[indicatorId] || 0);
   const min = Math.min(...values);
   const max = Math.max(...values);
 
   // Construct match expression
   const matchExpression: any[] = ['match', ['get', 'id']];
   
-  Object.entries(MOCK_REGION_DATA).forEach(([regionId, data]) => {
+  Object.entries(MOCK_REGION_DATA).forEach(([regionId, data]: [string, any]) => {
     const value = data.values[indicatorId];
     if (value !== undefined) {
       matchExpression.push(regionId);
@@ -54,11 +57,14 @@ const updateMapLayer = () => {
   map.value.setPaintProperty('kepri-fill', 'fill-color', matchExpression);
 };
 
-onMounted(() => {
+onMounted(async () => {
   if (process.client) {
+    await nextTick(); // Ensure DOM is ready
+    if (!mapContainer.value) return;
+
     try {
       map.value = new maplibregl.Map({
-        container: 'map',
+        container: mapContainer.value,
         // Style: Positron (CartoDB) - clean and light
         style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json', 
         center: [106.5, 2.5], // Centered between Batam and Natuna
@@ -80,6 +86,25 @@ onMounted(() => {
           data: kepriGeoJson as any
         });
 
+        // Add Source for Indonesia Provinces (External)
+        // Using a simplified GeoJSON for performance
+        map.value.addSource('indonesia-provinces', {
+          type: 'geojson',
+          data: 'https://raw.githubusercontent.com/superpikar/indonesia-geojson/master/indonesia-province-simple.json'
+        });
+
+        // Add Indonesia Provinces Border Layer
+        map.value.addLayer({
+          id: 'indonesia-provinces-line',
+          type: 'line',
+          source: 'indonesia-provinces',
+          paint: {
+            'line-color': '#dc2626', // Red 600 - Match reference
+            'line-width': 2,
+            'line-opacity': 0.8
+          }
+        });
+
         // Add Fill Layer (Initial empty/default)
         map.value.addLayer({
           id: 'kepri-fill',
@@ -92,14 +117,15 @@ onMounted(() => {
           }
         });
 
-        // Add Line Layer (Borders)
+        // Add Line Layer (Borders for Kepri Districts)
         map.value.addLayer({
           id: 'kepri-line',
           type: 'line',
           source: 'kepri-districts',
           paint: {
-            'line-color': '#ffffff',
-            'line-width': 1.5
+            'line-color': '#475569', // Slate 600 - Darker for visibility
+            'line-width': 2,
+            'line-opacity': 0.8
           }
         });
 

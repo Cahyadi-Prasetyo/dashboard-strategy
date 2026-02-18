@@ -27,20 +27,7 @@ export default defineNuxtConfig({
                     content: "Sistem Monitoring & Analisis Dampak Bencana",
                 },
             ],
-            link: [
-                // Leaflet CSS (loaded via CDN)
-                {
-                    rel: "stylesheet",
-                    href: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
-                },
-            ],
-            script: [
-                // Leaflet JS (loaded via CDN for window.L usage)
-                {
-                    src: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
-                    defer: true,
-                },
-            ],
+            script: [],
         },
     },
 
