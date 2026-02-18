@@ -5,11 +5,11 @@ export const MIN_ZOOM_LABEL = 7.5;
 // === KONFIGURASI VIEW PETA UTAMA ===
 export const MAP_VIEW_CONFIG = {
   bounds: [
-    [7.5, 100], // Updated bounds for Kepri context (South China Sea)
-    [-2.5, 112],
+    [7.5, 95], // Updated bounds for Kepri context (South China Sea)
+    [-2.5, 115],
   ],
-  initialCenter: [3.9456514, 108.142867], // Kepulauan Riau
-  initialZoom: 8,
+  initialCenter: [2.5, 108.142867], // Kepulauan Riau (Natuna) - Centered more south
+  initialZoom: 7, // Zoom out to see whole archipelago
   minZoom: 5,
   maxBoundsViscosity: 1.0,
 };

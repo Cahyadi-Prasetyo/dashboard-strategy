@@ -52,8 +52,8 @@
       <UButton
         label="Selengkapnya"
         icon="i-heroicons-arrow-right"
-        color="blue"
-        variant="ghost"
+        color="primary"
+        variant="ghost" 
         trailing
         size="md"
         class="font-semibold hover:bg-blue-50 -mr-2.5 px-3"
@@ -78,21 +78,63 @@ const loading = ref(false);
 const error = ref<any>(null);
 const indicators = ref<BpsIndicator[]>([]);
 
-// Mapping ID Indikator Strategis (Disajustment nanti sesuai respons riil)
-// Contoh ID umum (perlu validasi dengan data riil):
-// Inflasi, Pertumbuhan Ekonomi, Kemiskinan, IPM, TPT
-const TARGET_INDICATORS = ['Inflasi', 'Pertumbuhan Ekonomi', 'Indeks Pembangunan Manusia'];
+// 1. Pertumbuhan Ekonomi (PDRB) -> ID belum tampil di page 1, perlu cek ID spesifik nanti.
+// 2. Pengangguran (TPT) -> ID 12
+// 3. Pendapatan per kapita -> Perlu cek
+// 4. IPM -> ID 1
+// 5. APS -> Perlu cek
+// 6. IPG -> Perlu cek
+// 7. Rate Kemiskinan -> ID 3
+// 8. Gini Ratio -> ID 10
+
+// Mapping ID sementara berdasarkan response API Page 1:
+// Mapping ID Resmi BPS (Berdasarkan cek API) & Indikator User Request
+const DISPLAY_MAP: Record<number, { label: string; unit: string }> = {
+  1: { label: 'IPM', unit: 'Poin' }, // IPM
+  12: { label: 'Pengangguran (TPT)', unit: '%' }, // TPT
+  3: { label: 'Rate Kemiskinan', unit: '%' },
+  10: { label: 'Gini Ratio', unit: 'Poin' },
+  // ID 23: IDG, ID 22: IKG. IPG belum ketemu ID-nya, jadi pakai placeholder.
+  
+  // Indikator yang diminta tapi TIDAK ADA di API 'Strategic Indicators':
+  // Harus set manual atau beda endpoint
+  9991: { label: 'Pertumbuhan Ekonomi / PDRB', unit: '%' }, 
+  9992: { label: 'Pendapatan Per Kapita', unit: 'Ribu Rp' },
+  9993: { label: 'APS', unit: '%' },
+  9994: { label: 'IPG', unit: 'Poin' },
+};
 
 const displayIndicators = computed(() => {
-  // Jika data kosong, tampilkan mock data sementara agar layout terlihat
-  if (indicators.value.length === 0 && !loading.value && !error.value) {
-     return [
-        { indicator_id: 1, name: 'Pertumbuhan Ekonomi', value: '5.21', unit: 'Persen (%)' },
-        { indicator_id: 2, name: 'Tingkat Inflasi', value: '2.45', unit: 'Persen (%)' },
-        { indicator_id: 3, name: 'IPM', value: '78.48', unit: 'Poin' },
-     ];
-  }
-  return indicators.value.slice(0, 5);
+   if (indicators.value.length === 0) return [];
+   
+   // 1. Filter & Map data yang ada di API
+   const apiItems = indicators.value
+    .filter(item => DISPLAY_MAP[item.indicator_id])
+    .map(item => ({
+      ...item,
+      name: DISPLAY_MAP[item.indicator_id].label || item.title,
+      unit: item.unit === 'Tidak Ada Satuan' ? DISPLAY_MAP[item.indicator_id].unit : item.unit
+    }));
+
+   // 2. Tambahkan Placeholder untuk data yang belum tersedia di API (hardcoded sementara)
+   // Agar user melihat "slot" nya meskipun datanya "-"
+   const placeholders = [
+      { indicator_id: 9991, name: 'Pertumbuhan Ekonomi / PDRB', value: '5.21*', unit: '%', period_value: '2024' },
+      { indicator_id: 9992, name: 'Pendapatan Per Kapita', value: '-', unit: 'Ribu Rp', period_value: '-' },
+      { indicator_id: 9993, name: 'APS', value: '-', unit: '%', period_value: '-' },
+      { indicator_id: 9994, name: 'IPG', value: '-', unit: 'Poin', period_value: '-' },
+   ];
+
+   const merged = [...apiItems, ...placeholders];
+
+   // 3. Sort sesuai urutan request user
+   const order = ['9991', '12', '9992', '1', '9993', '9994', '3', '10'];
+   
+   return merged.sort((a, b) => {
+      const indexA = order.indexOf(String(a.indicator_id));
+      const indexB = order.indexOf(String(b.indicator_id));
+      return (indexA === -1 ? 99 : indexA) - (indexB === -1 ? 99 : indexB);
+   });
 });
 
 const lastUpdateYear = computed(() => new Date().getFullYear());
@@ -101,7 +143,7 @@ const fetchData = async () => {
   loading.value = true;
   error.value = null;
   try {
-    const { data } = await useFetch('/api/bps/indicators', {
+    const { data } = await useFetch<any>('/api/bps/indicators', {
       query: { domain: '2100' } // Kode Provinsi Kepri
     });
     
