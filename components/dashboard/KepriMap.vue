@@ -1,159 +1,283 @@
-
 <template>
-  <div class="relative w-full h-[calc(100vh-80px)] rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
-    <div id="map" class="w-full h-full z-0"></div>
+  <div class="relative w-full h-[calc(100vh-80px)] rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex">
 
-    <!-- Custom Legend Overlay -->
-    <!-- <div class="absolute bottom-6 right-6 bg-white/90 dark:bg-gray-900/90 backdrop-blur p-4 rounded-lg shadow-xl border border-gray-200 dark:border-gray-800 max-w-xs z-[1000]">
-      <h3 class="font-bold text-sm mb-2 text-gray-900 dark:text-white">Legenda Wilayah</h3>
-      <div class="flex items-center gap-2 mb-1">
-        <span class="w-3 h-3 rounded-full bg-blue-500 block"></span>
-        <span class="text-xs text-gray-600 dark:text-gray-300">Wilayah Kabupaten/Kota</span>
+    <!-- Main Map Container (Left/Center - Batam, Bintan, Lingga, Karimun) -->
+    <div id="main-map" class="flex-1 h-full z-0 relative"></div>
+
+    <!-- Right Panel for Insets -->
+    <div class="w-1/4 h-full flex flex-col border-l border-gray-200 dark:border-gray-800">
+      
+      <!-- Inset 1: Natuna -->
+      <div class="flex-1 relative border-b border-gray-200 dark:border-gray-800">
+        <div class="absolute top-2 right-2 z-400 text-xs font-bold text-gray-500 uppercase tracking-wider bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded">
+          Natuna
+        </div>
+        <div id="natuna-map" class="w-full h-full"></div>
       </div>
-      <p class="text-[10px] text-gray-500 mt-2">
-        Hover pada titik wilayah untuk melihat 8 indikator strategis.
-      </p>
-    </div> -->
+
+      <!-- Inset 2: Anambas -->
+      <div class="flex-1 relative">
+        <div class="absolute top-2 right-2 z-400 text-xs font-bold text-gray-500 uppercase tracking-wider bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded">
+          Kepulauan Anambas
+        </div>
+        <div id="anambas-map" class="w-full h-full"></div>
+      </div>
+
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed, watch, onUnmounted } from 'vue';
 import 'leaflet/dist/leaflet.css';
+// Import GeoJSONs
+import detailedGeoData from '~/assets/data/kabkot-2100.json';
 
-// Dynamically import Leaflet only on client-side
-let L: any;
+import kepriIndicatorsData from '~/server/data/kepri-indicators.json';
 
-const props = defineProps<{
-  data: any[]
-}>();
+// --- Types & Data ---
+type IndicatorConfig = {
+  key: string;
+  label: string;
+  unit: string;
+  isInverse: boolean; // true if lower is better (e.g. poverty, unemployment)
+  format?: (val: number) => string;
+};
 
-const map = ref<any>(null);
+const indicatorsList: IndicatorConfig[] = [
+  { key: 'pertumbuhan_ekonomi', label: 'Pertumbuhan Ekonomi', unit: '%', isInverse: false },
+  { key: 'pengangguran_tpt', label: 'Tingkat Pengangguran (TPT)', unit: '%', isInverse: true },
+  { key: 'pendapatan_per_kapita', label: 'Pendapatan Per Kapita', unit: 'IDR', isInverse: false, format: (v) => `Rp ${(v/1000000).toFixed(1)} Jt` },
+  { key: 'ipm', label: 'Indeks Pembangunan Manusia (IPM)', unit: 'Poin', isInverse: false },
+  { key: 'aps', label: 'Angka Partisipasi Sekolah (APS)', unit: '%', isInverse: false },
+  { key: 'ipg', label: 'Indeks Pembangunan Gender (IPG)', unit: 'Poin', isInverse: false },
+  { key: 'kemiskinan', label: 'Tingkat Kemiskinan', unit: '%', isInverse: true },
+  { key: 'gini_ratio', label: 'Gini Ratio', unit: 'Ratio', isInverse: true },
+];
+
+const selectedIndicatorKey = ref('pertumbuhan_ekonomi');
+
+
+// 3 Map Instances
+let mainMap: any = null;
+let natunaMap: any = null;
+let anambasMap: any = null;
+
+// Layer References for updates
+let mainLayer: any = null;
+let natunaLayer: any = null;
+let anambasLayer: any = null;
+
+let L: any = null;
+
+// --- Computed ---
+const currentIndicator = computed(() => 
+  indicatorsList.find(i => i.key === selectedIndicatorKey.value) || indicatorsList[0]
+);
+
+const currentGeoData = computed(() => detailedGeoData);
+
+// Helper to get indicator value for a region ID
+const getIndicatorValue = (regionId: string, key: string) => {
+  let regionData = kepriIndicatorsData.find(d => d.id === regionId);
+  return regionData?.indicators?.[key as keyof typeof regionData.indicators] || 0;
+};
+
+const currentMinMax = computed(() => {
+  const values = kepriIndicatorsData.map(d => 
+    d.indicators[selectedIndicatorKey.value as keyof typeof d.indicators] as number
+  );
+  return {
+    min: Math.min(...values),
+    max: Math.max(...values)
+  };
+});
+
+// --- Color Scale Logic ---
+const getColor = (value: number) => {
+  const { min, max } = currentMinMax.value;
+  const range = max - min || 1; 
+  let normalized = (value - min) / range; 
+
+  if (currentIndicator.value.isInverse) {
+    normalized = 1 - normalized; 
+  }
+
+  const hue = normalized * 120; 
+  return `hsl(${hue}, 80%, 45%)`; 
+};
+
+// --- Map Logic ---
+const getFeatureId = (feature: any) => {
+  return feature.properties.kdprov + feature.properties.kdkab;
+};
+
+const getRegionName = (feature: any) => {
+  return feature.properties.nmkab;
+}
+
+const styleFeature = (feature: any) => {
+  const id = getFeatureId(feature);
+  const value = getIndicatorValue(id, selectedIndicatorKey.value);
+  const color = getColor(value);
+
+  return {
+    fillColor: color,
+    weight: 0.5,
+    opacity: 1,
+    color: 'white',
+    dashArray: '',
+    fillOpacity: 1 // Full opacity for "No Tiles" look
+  };
+};
+
+// Filter Functions
+const isNatuna = (feature: any) => {
+  const name = getRegionName(feature)?.toUpperCase() || '';
+  return name.includes('NATUNA');
+};
+
+const isAnambas = (feature: any) => {
+  const name = getRegionName(feature)?.toUpperCase() || '';
+  return name.includes('ANAMBAS');
+};
+
+const isMainIsland = (feature: any) => {
+  return !isNatuna(feature) && !isAnambas(feature);
+};
+
+// Generic function to create/update a specific map layer
+const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, existingLayer: any, autoFit = true) => {
+  if (!mapInstance || !L) return null;
+  
+  if (existingLayer) {
+    mapInstance.removeLayer(existingLayer);
+  }
+
+  const newLayer = L.geoJSON(currentGeoData.value as any, {
+    filter: filterFn,
+    style: styleFeature,
+    onEachFeature: (feature: any, layer: any) => {
+      const id = getFeatureId(feature);
+      const regionName = getRegionName(feature);
+      
+      const subName = feature.properties.nmdesa; 
+      
+      // Tooltip Logic
+      layer.on({
+        mouseover: (e: any) => {
+          const layer = e.target;
+          layer.setStyle({
+            weight: 2,
+            color: '#333', // Dark border on hover
+            fillOpacity: 1
+          });
+          layer.bringToFront();
+          
+          const val = getIndicatorValue(id, selectedIndicatorKey.value);
+          const formattedVal = currentIndicator.value.format 
+            ? currentIndicator.value.format(val) 
+            : `${val} ${currentIndicator.value.unit}`;
+            
+          const tooltipContent = `
+            <div class="font-sans px-2 py-1 text-center min-w-[150px]">
+              <div class="font-bold text-gray-800 text-sm">${regionName}</div>
+              ${subName ? `<div class="text-[10px] text-gray-500 uppercase tracking-wide mb-1 border-b border-gray-200 pb-1">${subName}</div>` : ''}
+              <div class="text-xs text-gray-600 mt-1">
+                ${currentIndicator.value.label}: <br>
+                <span class="font-bold text-base text-blue-600">${formattedVal}</span>
+              </div>
+            </div>
+          `;
+
+          layer.bindTooltip(tooltipContent, {
+            permanent: false,
+            className: 'custom-leaflet-tooltip',
+            direction: 'top',
+            opacity: 1
+          }).openTooltip();
+        },
+        mouseout: (e: any) => {
+          // Reset style locally since we don't have easy access to the exact layer group here without passing it
+          // Simple reset to styleFeature
+          const originalStyle = styleFeature(feature);
+          layer.setStyle(originalStyle);
+          layer.closeTooltip();
+        },
+        click: (e: any) => {
+          mapInstance.fitBounds(e.target.getBounds());
+        }
+      });
+    }
+  }).addTo(mapInstance);
+
+  // Fit bounds if layer has layers 
+  if (autoFit && newLayer.getLayers().length > 0) {
+     mapInstance.fitBounds(newLayer.getBounds(), { padding: [20, 20] });
+  }
+
+  return newLayer;
+};
+
+const updateAllMaps = () => {
+  // Main Map: No Auto Fit, manual view set
+  mainLayer = updateLayerForMap(mainMap, isMainIsland, mainLayer, false);
+  if (mainMap) {
+      // Focus on "Big Islands" (Batam, Bintan, Karimun, Lingga)
+      // Center roughly on south of Bintan to include Lingga
+      mainMap.setView([0.35, 104.5], 8.5); 
+  }
+
+  // Insets: Auto Fit
+  natunaLayer = updateLayerForMap(natunaMap, isNatuna, natunaLayer, true);
+  anambasLayer = updateLayerForMap(anambasMap, isAnambas, anambasLayer, true);
+};
+
+// Cleanup maps on unmount to separate garbage collection
+onUnmounted(() => {
+  if (mainMap) mainMap.remove();
+  if (natunaMap) natunaMap.remove();
+  if (anambasMap) anambasMap.remove();
+});
+
+watch([selectedIndicatorKey], () => {
+  updateAllMaps();
+});
 
 onMounted(async () => {
   if (process.client) {
-    // Import Leaflet with type assertion to avoid "has no default export" errors in some TS configs
-    // @ts-ignore
     const leafletModule = await import('leaflet');
     L = leafletModule.default || leafletModule;
-    
-    // Initialize Map centered on Kepri
-    // Coordinates roughly center of Kepri (between Batam/Bintan and Natuna)
-    // Adjusted to show mostly the main islands, zoom level 8 might be good foundation
-    // Natuna is very far north, so center needs to be balanced.
-    // Center roughly: 2.5, 106.0
-    map.value = L.map('map', {
-        zoomControl: false,
-        attributionControl: false
-    }).setView([2.3, 106.0], 7);
 
-    // Add Tile Layer (OpenStreetMap Standard)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map.value);
+    // Common Map Options for "Plain" look (No Controls, No Zoom interaction by default for insets?)
+    // Let's keep zoom/pan enabled but no UI controls for cleaner look
+    const commonOptions = { 
+      zoomControl: false, 
+      attributionControl: false,
+      zoomSnap: 0.1 // smoother zoom
+    };
 
-    // Add Custom Zoom Control
-    L.control.zoom({
-        position: 'topright'
-    }).addTo(map.value);
+    // Initialize 3 Maps
+    mainMap = L.map('main-map', commonOptions);
+    natunaMap = L.map('natuna-map', commonOptions);
+    anambasMap = L.map('anambas-map', commonOptions);
 
-    // Add Markers/Circles
-    props.data.forEach((region: any) => {
-        const circle = L.circleMarker(region.coords, {
-            radius: 12,
-            fillColor: '#3b82f6', // blue-500
-            color: '#ffffff',
-            weight: 2,
-            opacity: 1,
-            fillOpacity: 0.8
-        }).addTo(map.value);
-
-        // Tooltip Content Construction
-        const tooltipContent = `
-            <div class="p-3 min-w-[200px]">
-                <h4 class="font-bold text-base mb-3 border-b pb-2 border-gray-200">${region.name}</h4>
-                <div class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm">
-                    <div class="text-gray-500">Ekonomi:</div>
-                    <div class="font-medium text-right text-blue-600">${region.indicators.pertumbuhan_ekonomi}%</div>
-                    
-                    <div class="text-gray-500">TPT:</div>
-                    <div class="font-medium text-right">${region.indicators.pengangguran_tpt}%</div>
-                    
-                    <div class="text-gray-500">PDRB/Cap:</div>
-                    <div class="font-medium text-right text-emerald-600">${(region.indicators.pendapatan_per_kapita / 1000000).toFixed(1)}jt</div>
-                    
-                    <div class="text-gray-500">IPM:</div>
-                    <div class="font-medium text-right">${region.indicators.ipm}</div>
-                    
-                    <div class="text-gray-500">APS:</div>
-                    <div class="font-medium text-right">${region.indicators.aps}</div>
-                    
-                    <div class="text-gray-500">IPG:</div>
-                    <div class="font-medium text-right">${region.indicators.ipg}</div>
-                    
-                    <div class="text-gray-500">Kemiskinan:</div>
-                    <div class="font-medium text-right text-red-500">${region.indicators.kemiskinan}%</div>
-                    
-                    <div class="text-gray-500">Gini:</div>
-                    <div class="font-medium text-right">${region.indicators.gini_ratio}</div>
-                </div>
-            </div>
-        `;
-
-        circle.bindTooltip(tooltipContent, {
-            permanent: false,
-            direction: 'top',
-            offset: [0, -10],
-            className: 'custom-leaflet-tooltip'
-        });
-
-        // Hover effects
-        circle.on('mouseover', function(e: any) {
-            e.target.setStyle({
-                fillColor: '#2563eb', // blue-600
-                radius: 15,
-                fillOpacity: 1
-            });
-            e.target.openTooltip();
-        });
-
-        circle.on('mouseout', function(e: any) {
-            e.target.setStyle({
-                fillColor: '#3b82f6',
-                radius: 12,
-                fillOpacity: 0.8
-            });
-            e.target.closeTooltip();
-        });
-    });
+    // Initial Load
+    updateAllMaps();
   }
 });
 </script>
 
 <style>
-/* Global overrides for Leaflet in this component */
 .custom-leaflet-tooltip {
-    background: white;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     padding: 0;
-    overflow: hidden;
 }
-.custom-leaflet-tooltip .leaflet-tooltip-content {
-    margin: 0;
-}
+/* Override Leaflet background to be transparent/white for the "No Tile" look */
 .leaflet-container {
-    background: #f8fafc; /* slate-50 */
-    font-family: inherit;
-}
-.dark .custom-leaflet-tooltip {
-    background: #1e293b; /* slate-800 */
-    color: white;
-    border: 1px solid #334155;
-}
-.dark .custom-leaflet-tooltip h4 {
-    border-color: #334155;
+    background: transparent !important; /* Or white */
 }
 </style>

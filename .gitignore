@@ -64,3 +64,6 @@ coverage
 
 # Typescript
 *.tsbuildinfo
+
+# Data Files (Shapefiles)
+assets/data/kabkot_2100.*
