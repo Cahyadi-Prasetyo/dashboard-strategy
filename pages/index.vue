@@ -5,10 +5,7 @@ await navigateTo('/dashboard');
 </script>
 
 <template>
-  <div class="flex items-center justify-center h-screen bg-gray-50 dark:bg-gray-950">
-    <div class="flex flex-col items-center gap-4">
-        <UIcon name="i-heroicons-arrow-path" class="w-8 h-8 animate-spin text-blue-500" />
-        <p class="text-gray-500">Memuat Dashboard...</p>
-    </div>
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
   </div>
 </template>
