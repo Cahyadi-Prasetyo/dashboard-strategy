@@ -1,0 +1,82 @@
+[
+    {
+        "indicator_id": 1,
+        "title": "Pertumbuhan Ekonomi",
+        "name": "Laju Pertumbuhan PDRB (y-on-y)",
+        "value": "5.20",
+        "unit": "%",
+        "year": 2024,
+        "status": "Naik",
+        "updated_at": "2024-11-05"
+    },
+    {
+        "indicator_id": 2,
+        "title": "Indeks Pembangungan Manusia",
+        "name": "IPM",
+        "value": "79.15",
+        "unit": "Poin",
+        "year": 2024,
+        "status": "Naik",
+        "updated_at": "2024-11-15"
+    },
+    {
+        "indicator_id": 3,
+        "title": "Tingkat Pengangguran Terbuka",
+        "name": "TPT",
+        "value": "4.15",
+        "unit": "%",
+        "year": 2024,
+        "status": "Turun",
+        "updated_at": "2024-05-05"
+    },
+    {
+        "indicator_id": 4,
+        "title": "Tingkat Kemiskinan",
+        "name": "Persentase Penduduk Miskin",
+        "value": "5.60",
+        "unit": "%",
+        "year": 2024,
+        "status": "Turun",
+        "updated_at": "2024-07-01"
+    },
+    {
+        "indicator_id": 5,
+        "title": "Inflasi",
+        "name": "Tingkat Inflasi (y-on-y)",
+        "value": "2.50",
+        "unit": "%",
+        "year": 2024,
+        "status": "Stabil",
+        "updated_at": "2024-12-01"
+    },
+    {
+        "indicator_id": 6,
+        "title": "Nilai Ekspor",
+        "name": "Total Ekspor",
+        "value": "1250.5",
+        "unit": "Juta USD",
+        "year": 2024,
+        "status": "Naik",
+        "updated_at": "2024-11-15"
+    },
+    {
+        "indicator_id": 7,
+        "title": "Nilai Impor",
+        "name": "Total Impor",
+        "value": "980.2",
+        "unit": "Juta USD",
+        "year": 2024,
+        "status": "Naik",
+        "updated_at": "2024-11-15"
+    },
+    {
+        "indicator_id": 8,
+        "title": "Kunjungan Wisman",
+        "name": "Jumlah Kunjungan Wisman",
+        "value": "150300",
+        "unit": "Kunjungan",
+        "year": 2024,
+        "status": "Naik",
+        "updated_at": "2024-11-01"
+    }
+]

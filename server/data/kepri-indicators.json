@@ -1,0 +1,128 @@
+[
+    {
+        "id": "2101",
+        "name": "Kab. Karimun",
+        "coords": [
+            0.9996,
+            103.4285
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 4.5,
+            "pengangguran_tpt": 6.2,
+            "pendapatan_per_kapita": 12500000,
+            "ipm": 72.8,
+            "aps": 85.0,
+            "ipg": 68.5,
+            "kemiskinan": 5.8,
+            "gini_ratio": 0.32
+        }
+    },
+    {
+        "id": "2102",
+        "name": "Kab. Bintan",
+        "coords": [
+            1.1378,
+            104.5369
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 5.1,
+            "pengangguran_tpt": 5.8,
+            "pendapatan_per_kapita": 13200000,
+            "ipm": 74.5,
+            "aps": 88.0,
+            "ipg": 70.1,
+            "kemiskinan": 4.9,
+            "gini_ratio": 0.31
+        }
+    },
+    {
+        "id": "2103",
+        "name": "Kab. Natuna",
+        "coords": [
+            3.9392,
+            108.2039
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 3.8,
+            "pengangguran_tpt": 4.5,
+            "pendapatan_per_kapita": 11500000,
+            "ipm": 70.2,
+            "aps": 82.5,
+            "ipg": 65.4,
+            "kemiskinan": 6.5,
+            "gini_ratio": 0.29
+        }
+    },
+    {
+        "id": "2104",
+        "name": "Kab. Lingga",
+        "coords": [
+            -0.2173,
+            104.6293
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 3.5,
+            "pengangguran_tpt": 4.2,
+            "pendapatan_per_kapita": 9800000,
+            "ipm": 68.9,
+            "aps": 80.0,
+            "ipg": 64.0,
+            "kemiskinan": 7.2,
+            "gini_ratio": 0.28
+        }
+    },
+    {
+        "id": "2105",
+        "name": "Kab. Kepulauan Anambas",
+        "coords": [
+            3.2384,
+            106.1152
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 3.9,
+            "pengangguran_tpt": 4.8,
+            "pendapatan_per_kapita": 10500000,
+            "ipm": 69.5,
+            "aps": 81.5,
+            "ipg": 66.2,
+            "kemiskinan": 6.1,
+            "gini_ratio": 0.30
+        }
+    },
+    {
+        "id": "2171",
+        "name": "Kota Batam",
+        "coords": [
+            1.0456,
+            104.0305
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 6.8,
+            "pengangguran_tpt": 7.5,
+            "pendapatan_per_kapita": 18500000,
+            "ipm": 81.2,
+            "aps": 92.0,
+            "ipg": 75.8,
+            "kemiskinan": 3.5,
+            "gini_ratio": 0.38
+        }
+    },
+    {
+        "id": "2172",
+        "name": "Kota Tanjung Pinang",
+        "coords": [
+            0.9165,
+            104.4497
+        ],
+        "indicators": {
+            "pertumbuhan_ekonomi": 5.5,
+            "pengangguran_tpt": 6.0,
+            "pendapatan_per_kapita": 15800000,
+            "ipm": 79.5,
+            "aps": 90.5,
+            "ipg": 73.2,
+            "kemiskinan": 4.2,
+            "gini_ratio": 0.34
+        }
+    }
+]

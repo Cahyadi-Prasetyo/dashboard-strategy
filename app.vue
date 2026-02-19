@@ -1,26 +1,34 @@
+
 <template>
-  <UApp
-    :toaster="{
-      position: 'top-center',
-    }"
-  >
+  <div class="antialiased text-slate-900 dark:text-slate-50 bg-white dark:bg-slate-950 min-h-screen font-sans selection:bg-primary-500 selection:text-white">
     <NuxtLayout>
-      <NuxtPage :keepalive="{ max: 10 }" />
+      <NuxtPage />
     </NuxtLayout>
-  </UApp>
+    <UNotifications />
+  </div>
 </template>
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - Dashboard Strategis` : 'Dashboard Strategis Provinsi Kepulauan Riau';
+  },
+  bodyAttrs: {
+    class: 'overflow-hidden' 
+  }
+})
+</script>
 
 <style>
-/* Fix Driver.js ketutupan Peta Leaflet */
-div#driver-popover-item {
-  z-index: 10000 !important;
+/* Global Transition */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.driver-overlay {
-  z-index: 9999 !important;
-}
-.driver-active-element {
-  z-index: 10000 !important; /* Biar elemen yang disorot naik ke atas overlay */
-  position: relative;
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(4px);
 }
 </style>
