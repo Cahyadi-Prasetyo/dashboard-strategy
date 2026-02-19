@@ -1,5 +1,42 @@
 <template>
-  <div class="relative w-full h-[calc(100vh-80px)] rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex">
+  <div ref="mapContainer" class="relative w-full h-[calc(100vh-80px)] rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex">
+
+    <!-- Global Tooltip Overlay -->
+    <div 
+      v-if="tooltip.visible"
+      class="fixed z-[9999] pointer-events-none bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl px-4 py-3 min-w-[300px] transition-opacity duration-75"
+      :style="{ 
+        top: tooltip.isAnambas ? anambasTopY + 'px' : (tooltip.y + 15) + 'px', 
+        left: tooltip.align === 'left' ? (tooltip.x - 15) + 'px' : (tooltip.x + 15) + 'px',
+        transform: tooltip.align === 'left' ? 'translateX(-100%)' : 'none'
+      }"
+    >
+      <div class="font-bold text-gray-800 dark:text-gray-100 text-sm mb-1">{{ tooltip.name }}</div>
+      <div v-if="tooltip.subName" class="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3 pb-1 border-b border-gray-100 dark:border-gray-700">{{ tooltip.subName }}</div>
+      
+      <div class="flex flex-col gap-1">
+        <div 
+          v-for="ind in indicatorsList" 
+          :key="ind.key"
+          class="flex justify-between items-center text-xs py-1 border-b border-gray-100 dark:border-gray-800 last:border-0 px-1 rounded hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+          :class="ind.key === selectedIndicatorKey ? 'bg-blue-50 dark:bg-blue-900/20 font-semibold' : ''"
+        >
+          <span class="mr-3 text-left w-36 truncate" :class="ind.key === selectedIndicatorKey ? 'text-blue-700 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400'">
+            {{ ind.label }}
+          </span>
+          <span class="text-right font-medium whitespace-nowrap" :class="ind.key === selectedIndicatorKey ? 'text-blue-700 dark:text-blue-300' : 'text-gray-700 dark:text-gray-200'">
+            {{ ind.format ? ind.format(getIndicatorValue(tooltip.id, ind.key)) : `${getIndicatorValue(tooltip.id, ind.key)} ${ind.unit}` }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Cursor Pointer (Blue Dot) -->
+    <div 
+      v-if="tooltip.visible"
+      class="fixed z-[10000] w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-md pointer-events-none transform -translate-x-1/2 -translate-y-1/2 animate-pulse"
+      :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"
+    ></div>
 
     <!-- Main Map Container (Left/Center - Batam, Bintan, Lingga, Karimun) -->
     <div id="main-map" class="flex-1 h-full z-0 relative"></div>
@@ -9,7 +46,7 @@
       
       <!-- Inset 1: Natuna -->
       <div class="flex-1 relative border-b border-gray-200 dark:border-gray-800">
-        <div class="absolute top-2 right-2 z-400 text-xs font-bold text-gray-500 uppercase tracking-wider bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded">
+        <div class="absolute top-2 right-2 z-400 text-xs font-bold text-gray-500 uppercase tracking-wider bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded shadow-sm backdrop-blur-sm">
           Natuna
         </div>
         <div id="natuna-map" class="w-full h-full"></div>
@@ -17,7 +54,7 @@
 
       <!-- Inset 2: Anambas -->
       <div class="flex-1 relative">
-        <div class="absolute top-2 right-2 z-400 text-xs font-bold text-gray-500 uppercase tracking-wider bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded">
+        <div class="absolute top-2 right-2 z-400 text-xs font-bold text-gray-500 uppercase tracking-wider bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded shadow-sm backdrop-blur-sm">
           Kepulauan Anambas
         </div>
         <div id="anambas-map" class="w-full h-full"></div>
@@ -52,7 +89,7 @@ const indicatorsList: IndicatorConfig[] = [
   { key: 'aps', label: 'Angka Partisipasi Sekolah (APS)', unit: '%', isInverse: false },
   { key: 'ipg', label: 'Indeks Pembangunan Gender (IPG)', unit: 'Poin', isInverse: false },
   { key: 'kemiskinan', label: 'Tingkat Kemiskinan', unit: '%', isInverse: true },
-  { key: 'gini_ratio', label: 'Gini Ratio', unit: 'Ratio', isInverse: true },
+  { key: 'gini_ratio', label: 'Rasio Gini', unit: 'Ratio', isInverse: true },
 ];
 
 const selectedIndicatorKey = ref('pertumbuhan_ekonomi');
@@ -70,7 +107,57 @@ let anambasLayer: any = null;
 
 let L: any = null;
 
-// --- Computed ---
+const mapContainer = ref<HTMLElement | null>(null);
+const anambasTopY = ref(0);
+
+// Update Anambas Top Position on resize/mount
+const updateLayoutMetrics = () => {
+  if (mapContainer.value) {
+    const rect = mapContainer.value.getBoundingClientRect();
+    // Anambas is the bottom half of the container
+    anambasTopY.value = rect.top + (rect.height / 2) + 12; // +12 for perfect alignment with border/padding
+  }
+};
+
+// --- Tooltip State ---
+const tooltip = ref({
+  visible: false,
+  x: 0,
+  y: 0,
+  name: '',
+  subName: '',
+  id: '',
+  align: 'right',
+  isAnambas: false // New flag
+});
+
+
+// ... watch/lifecycle ...
+onMounted(async () => {
+  if (process.client) {
+    window.addEventListener('resize', updateLayoutMetrics);
+    // Initial metric update after a small delay to ensure render
+    setTimeout(updateLayoutMetrics, 500);
+
+    const leafletModule = await import('leaflet');
+    L = leafletModule.default || leafletModule;
+
+    const commonOptions = { 
+      zoomControl: false, 
+      attributionControl: false,
+      zoomSnap: 0.1 
+    };
+
+    // Initialize 3 Maps
+    mainMap = L.map('main-map', commonOptions);
+    natunaMap = L.map('natuna-map', commonOptions);
+    anambasMap = L.map('anambas-map', commonOptions);
+
+    // Initial Load
+    updateAllMaps();
+  }
+});
+
 const currentIndicator = computed(() => 
   indicatorsList.find(i => i.key === selectedIndicatorKey.value) || indicatorsList[0]
 );
@@ -114,7 +201,7 @@ const getFeatureId = (feature: any) => {
 
 const getRegionName = (feature: any) => {
   return feature.properties.nmkab;
-}
+};
 
 const styleFeature = (feature: any) => {
   const id = getFeatureId(feature);
@@ -127,7 +214,8 @@ const styleFeature = (feature: any) => {
     opacity: 1,
     color: 'white',
     dashArray: '',
-    fillOpacity: 1 // Full opacity for "No Tiles" look
+    fillOpacity: 1, // Full opacity for "No Tiles" look
+    className: 'cursor-pointer' // Add pointer cursor
   };
 };
 
@@ -160,61 +248,51 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
     onEachFeature: (feature: any, layer: any) => {
       const id = getFeatureId(feature);
       const regionName = getRegionName(feature);
-      
       const subName = feature.properties.nmdesa; 
       
-      // Tooltip Logic
+      // Global Tooltip Logic (Instead of bindTooltip)
       layer.on({
         mouseover: (e: any) => {
           const layer = e.target;
           layer.setStyle({
             weight: 2,
-            color: '#333', // Dark border on hover
+            color: '#333', 
             fillOpacity: 1
           });
           layer.bringToFront();
           
-          let indicatorsHtml = '';
-          indicatorsList.forEach(ind => {
-             const v = getIndicatorValue(id, ind.key);
-             const fVal = ind.format ? ind.format(v) : `${v} ${ind.unit}`;
-             const isSelected = ind.key === selectedIndicatorKey.value;
-             // Highlight selected indicator
-             const rowClass = isSelected ? 'bg-blue-50 font-semibold' : '';
-             const textClass = isSelected ? 'text-blue-700' : 'text-gray-600';
+          const clientX = e.originalEvent.clientX;
+          const isRightSide = clientX > window.innerWidth / 2;
+          // CheckAnambas
+          const isAnambasFeature = isAnambas(feature);
 
-             indicatorsHtml += `
-                <div class="flex justify-between items-center text-xs py-1 border-b border-gray-100 last:border-0 ${rowClass} px-1">
-                    <span class="text-gray-500 mr-3 text-left w-32 truncate">${ind.label}</span>
-                    <span class="${textClass} text-right font-medium whitespace-nowrap">${fVal}</span>
-                </div>
-             `;
-          });
-            
-          const tooltipContent = `
-            <div class="font-sans px-3 py-2 text-left min-w-[280px]">
-              <div class="font-bold text-gray-800 text-sm mb-1">${regionName}</div>
-              ${subName ? `<div class="text-[10px] text-gray-400 uppercase tracking-wide mb-2 pb-1 border-b border-gray-100">${subName}</div>` : ''}
-              <div class="flex flex-col">
-                ${indicatorsHtml}
-              </div>
-            </div>
-          `;
-
-          layer.bindTooltip(tooltipContent, {
-            permanent: false,
-            className: 'custom-leaflet-tooltip',
-            direction: 'auto', // Smart positioning
-            opacity: 0.95,
-            offset: [0, -10]
-          }).openTooltip();
+          // Show Tooltip
+          tooltip.value = {
+            visible: true,
+            x: clientX,
+            y: e.originalEvent.clientY,
+            name: regionName,
+            subName: subName,
+            id: id,
+            align: isRightSide ? 'left' : 'right',
+            isAnambas: isAnambasFeature
+          };
+        },
+        mousemove: (e: any) => {
+          const clientX = e.originalEvent.clientX;
+          const isRightSide = clientX > window.innerWidth / 2;
+          
+          // Update position to follow mouse
+          tooltip.value.x = clientX;
+          tooltip.value.y = e.originalEvent.clientY;
+          tooltip.value.align = isRightSide ? 'left' : 'right';
+          tooltip.value.isAnambas = isAnambas(feature);
         },
         mouseout: (e: any) => {
-          // Reset style locally since we don't have easy access to the exact layer group here without passing it
-          // Simple reset to styleFeature
-          const originalStyle = styleFeature(feature);
-          layer.setStyle(originalStyle);
-          layer.closeTooltip();
+            const originalStyle = styleFeature(feature);
+            layer.setStyle(originalStyle);
+            // Hide Tooltip
+            tooltip.value.visible = false;
         },
         click: (e: any) => {
           mapInstance.fitBounds(e.target.getBounds());
@@ -232,16 +310,20 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
 };
 
 const updateAllMaps = () => {
-  // Main Map: No Auto Fit, manual view set
+  // Main Map: Manual view for better focus on Batam/Bintan/Lingga
   mainLayer = updateLayerForMap(mainMap, isMainIsland, mainLayer, false);
   if (mainMap) {
-      // Focus on "Big Islands" (Batam, Bintan, Karimun, Lingga)
-      // Center roughly on south of Bintan to include Lingga
-      mainMap.setView([0.35, 104.5], 8.5); 
+      // Shifted slightly down-right to center the group better
+      mainMap.setView([0.30, 103.75], 8.7); 
   }
 
-  // Insets: Auto Fit
-  natunaLayer = updateLayerForMap(natunaMap, isNatuna, natunaLayer, true);
+  // Natuna: Manual focus on "Big Island" (Natuna Besar)
+  natunaLayer = updateLayerForMap(natunaMap, isNatuna, natunaLayer, false); // false = no auto fit
+  if (natunaMap) {
+      natunaMap.setView([3.95, 108.20], 8.8); // Focus on Ranai/Natuna Besar
+  }
+
+  // Anambas: Auto Fit is fine, but maybe zoom out slightly? Keep auto for now.
   anambasLayer = updateLayerForMap(anambasMap, isAnambas, anambasLayer, true);
 };
 
@@ -255,39 +337,9 @@ onUnmounted(() => {
 watch([selectedIndicatorKey], () => {
   updateAllMaps();
 });
-
-onMounted(async () => {
-  if (process.client) {
-    const leafletModule = await import('leaflet');
-    L = leafletModule.default || leafletModule;
-
-    // Common Map Options for "Plain" look (No Controls, No Zoom interaction by default for insets?)
-    // Let's keep zoom/pan enabled but no UI controls for cleaner look
-    const commonOptions = { 
-      zoomControl: false, 
-      attributionControl: false,
-      zoomSnap: 0.1 // smoother zoom
-    };
-
-    // Initialize 3 Maps
-    mainMap = L.map('main-map', commonOptions);
-    natunaMap = L.map('natuna-map', commonOptions);
-    anambasMap = L.map('anambas-map', commonOptions);
-
-    // Initial Load
-    updateAllMaps();
-  }
-});
 </script>
 
 <style>
-.custom-leaflet-tooltip {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    padding: 0;
-}
 /* Override Leaflet background to be transparent/white for the "No Tile" look */
 .leaflet-container {
     background: transparent !important; /* Or white */
