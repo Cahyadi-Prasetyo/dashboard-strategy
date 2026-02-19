@@ -4,7 +4,7 @@
     <div id="map" class="w-full h-full z-0"></div>
 
     <!-- Custom Legend Overlay -->
-    <div class="absolute bottom-6 right-6 bg-white/90 dark:bg-gray-900/90 backdrop-blur p-4 rounded-lg shadow-xl border border-gray-200 dark:border-gray-800 max-w-xs z-[1000]">
+    <!-- <div class="absolute bottom-6 right-6 bg-white/90 dark:bg-gray-900/90 backdrop-blur p-4 rounded-lg shadow-xl border border-gray-200 dark:border-gray-800 max-w-xs z-[1000]">
       <h3 class="font-bold text-sm mb-2 text-gray-900 dark:text-white">Legenda Wilayah</h3>
       <div class="flex items-center gap-2 mb-1">
         <span class="w-3 h-3 rounded-full bg-blue-500 block"></span>
@@ -13,7 +13,7 @@
       <p class="text-[10px] text-gray-500 mt-2">
         Hover pada titik wilayah untuk melihat 8 indikator strategis.
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 
