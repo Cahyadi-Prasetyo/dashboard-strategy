@@ -174,18 +174,29 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
           });
           layer.bringToFront();
           
-          const val = getIndicatorValue(id, selectedIndicatorKey.value);
-          const formattedVal = currentIndicator.value.format 
-            ? currentIndicator.value.format(val) 
-            : `${val} ${currentIndicator.value.unit}`;
+          let indicatorsHtml = '';
+          indicatorsList.forEach(ind => {
+             const v = getIndicatorValue(id, ind.key);
+             const fVal = ind.format ? ind.format(v) : `${v} ${ind.unit}`;
+             const isSelected = ind.key === selectedIndicatorKey.value;
+             // Highlight selected indicator
+             const rowClass = isSelected ? 'bg-blue-50 font-semibold' : '';
+             const textClass = isSelected ? 'text-blue-700' : 'text-gray-600';
+
+             indicatorsHtml += `
+                <div class="flex justify-between items-center text-xs py-1 border-b border-gray-100 last:border-0 ${rowClass} px-1">
+                    <span class="text-gray-500 mr-3 text-left w-32 truncate">${ind.label}</span>
+                    <span class="${textClass} text-right font-medium whitespace-nowrap">${fVal}</span>
+                </div>
+             `;
+          });
             
           const tooltipContent = `
-            <div class="font-sans px-2 py-1 text-center min-w-[150px]">
-              <div class="font-bold text-gray-800 text-sm">${regionName}</div>
-              ${subName ? `<div class="text-[10px] text-gray-500 uppercase tracking-wide mb-1 border-b border-gray-200 pb-1">${subName}</div>` : ''}
-              <div class="text-xs text-gray-600 mt-1">
-                ${currentIndicator.value.label}: <br>
-                <span class="font-bold text-base text-blue-600">${formattedVal}</span>
+            <div class="font-sans px-3 py-2 text-left min-w-[280px]">
+              <div class="font-bold text-gray-800 text-sm mb-1">${regionName}</div>
+              ${subName ? `<div class="text-[10px] text-gray-400 uppercase tracking-wide mb-2 pb-1 border-b border-gray-100">${subName}</div>` : ''}
+              <div class="flex flex-col">
+                ${indicatorsHtml}
               </div>
             </div>
           `;
@@ -193,8 +204,9 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
           layer.bindTooltip(tooltipContent, {
             permanent: false,
             className: 'custom-leaflet-tooltip',
-            direction: 'top',
-            opacity: 1
+            direction: 'auto', // Smart positioning
+            opacity: 0.95,
+            offset: [0, -10]
           }).openTooltip();
         },
         mouseout: (e: any) => {
