@@ -221,7 +221,9 @@ const tooltipDisplayList = computed(() => {
   
   return items.map(item => {
     const value = item.getValue ? item.getValue() : getIndicatorValue(regionId, item.key);
-    const displayValue = item.format ? item.format(value) : `${value} ${item.unit}`;
+    const displayValue = (value === null || value === undefined || value === 0) 
+      ? '-' 
+      : (item.format ? item.format(value) : `${value} ${item.unit}`);
     return {
       key: item.key,
       shortLabel: item.shortLabel,

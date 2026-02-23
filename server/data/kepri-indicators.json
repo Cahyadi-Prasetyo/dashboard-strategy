@@ -26,13 +26,13 @@
                 "tw3": 6.48,
                 "tw4": 6.45
             },
-            "pengangguran_tpt": 6.2,
+            "pengangguran_tpt": 6.31,
             "pendapatan_per_kapita": 69608000,
-            "ipm": 72.8,
-            "aps": 85.0,
-            "ipg": 68.5,
-            "kemiskinan": 5.8,
-            "gini_ratio": 0.32
+            "ipm": 76.08,
+            "aps": 70.83,
+            "ipg": 91.61,
+            "kemiskinan": 5.16,
+            "gini_ratio": null
         }
     },
     {
@@ -62,13 +62,13 @@
                 "tw3": 8.92,
                 "tw4": 8.89
             },
-            "pengangguran_tpt": 5.8,
+            "pengangguran_tpt": 4.81,
             "pendapatan_per_kapita": 180544000,
-            "ipm": 74.5,
-            "aps": 88.0,
-            "ipg": 70.1,
-            "kemiskinan": 4.9,
-            "gini_ratio": 0.31
+            "ipm": 78.65,
+            "aps": 81.32,
+            "ipg": 94.05,
+            "kemiskinan": 4.77,
+            "gini_ratio": null
         }
     },
     {
@@ -98,13 +98,13 @@
                 "tw3": -3.82,
                 "tw4": -3.57
             },
-            "pengangguran_tpt": 4.5,
+            "pengangguran_tpt": 3.98,
             "pendapatan_per_kapita": 264903000,
-            "ipm": 70.2,
-            "aps": 82.5,
-            "ipg": 65.4,
-            "kemiskinan": 6.5,
-            "gini_ratio": 0.29
+            "ipm": 78.94,
+            "aps": 81.24,
+            "ipg": 91.82,
+            "kemiskinan": 4.81,
+            "gini_ratio": null
         }
     },
     {
@@ -134,13 +134,13 @@
                 "tw3": 4.38,
                 "tw4": 4.42
             },
-            "pengangguran_tpt": 4.2,
+            "pengangguran_tpt": 3.52,
             "pendapatan_per_kapita": 54936000,
-            "ipm": 68.9,
-            "aps": 80.0,
-            "ipg": 64.0,
-            "kemiskinan": 7.2,
-            "gini_ratio": 0.28
+            "ipm": 73.82,
+            "aps": 81.5,
+            "ipg": 91.12,
+            "kemiskinan": 9.12,
+            "gini_ratio": null
         }
     },
     {
@@ -170,13 +170,13 @@
                 "tw3": -5.34,
                 "tw4": -5.67
             },
-            "pengangguran_tpt": 4.8,
+            "pengangguran_tpt": 2.56,
             "pendapatan_per_kapita": 362072000,
-            "ipm": 69.5,
-            "aps": 81.5,
-            "ipg": 66.2,
-            "kemiskinan": 6.1,
-            "gini_ratio": 0.30
+            "ipm": 74.07,
+            "aps": 85.18,
+            "ipg": 91.58,
+            "kemiskinan": 6.35,
+            "gini_ratio": null
         }
     },
     {
@@ -206,13 +206,13 @@
                 "tw3": 6.75,
                 "tw4": 6.69
             },
-            "pengangguran_tpt": 7.5,
+            "pengangguran_tpt": 7.57,
             "pendapatan_per_kapita": 182507000,
-            "ipm": 81.2,
-            "aps": 92.0,
-            "ipg": 75.8,
-            "kemiskinan": 3.5,
-            "gini_ratio": 0.38
+            "ipm": 83.8,
+            "aps": 88.68,
+            "ipg": 95.72,
+            "kemiskinan": 3.81,
+            "gini_ratio": null
         }
     },
     {
@@ -242,13 +242,13 @@
                 "tw3": 3.62,
                 "tw4": 3.78
             },
-            "pengangguran_tpt": 6.0,
+            "pengangguran_tpt": 4.72,
             "pendapatan_per_kapita": 105384000,
-            "ipm": 79.5,
-            "aps": 90.5,
-            "ipg": 73.2,
-            "kemiskinan": 4.2,
-            "gini_ratio": 0.34
+            "ipm": 82.02,
+            "aps": 86.31,
+            "ipg": 97.02,
+            "kemiskinan": 5.96,
+            "gini_ratio": null
         }
     }
 ]
