@@ -5,9 +5,15 @@
       Indikator BPS Kepri
     </h2>
     
-    <div class="space-y-2">
+    <!-- Loading skeleton -->
+    <div v-if="loading" class="space-y-2">
+      <div v-for="i in 8" :key="i" class="h-9 bg-gray-100 rounded-lg animate-pulse"></div>
+    </div>
+
+    <!-- Indicator buttons -->
+    <div v-else class="space-y-2">
       <button
-        v-for="indicator in INDICATORS"
+        v-for="indicator in indicators"
         :key="indicator.id"
         @click="selectIndicator(indicator)"
         class="w-full text-left px-3 py-2 rounded-lg transition-all duration-200 text-sm flex items-center justify-between group"
@@ -39,14 +45,29 @@
 </template>
 
 <script setup lang="ts">
-import { useDashboardState } from '~/composables/useDashboardState';
-import { INDICATORS } from '~/constants/indicators';
-import type { BPSIndicator } from '~/types/indicator';
+const selectedIndicatorId = useState<string>('dashboard-indicator-id', () => 'pertumbuhan_ekonomi');
+const indicators = ref<any[]>([]);
+const loading = ref(true);
 
-const { selectedIndicatorId, activeIndicator, setIndicator } = useDashboardState();
+// Fetch indicator config from API
+onMounted(async () => {
+  try {
+    const response = await $fetch<any>('/api/bps/indicators');
+    if (response.status === 'success' && response.data) {
+      indicators.value = response.data;
+    }
+  } catch (err) {
+    console.error('Failed to load indicators:', err);
+  } finally {
+    loading.value = false;
+  }
+});
 
-const selectIndicator = (indicator: BPSIndicator) => {
-  setIndicator(indicator.id);
+const activeIndicator = computed(() =>
+  indicators.value.find(i => i.id === selectedIndicatorId.value)
+);
+
+const selectIndicator = (indicator: any) => {
+  selectedIndicatorId.value = indicator.id;
 };
 </script>
-

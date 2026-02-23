@@ -1,0 +1,75 @@
+[
+    {
+        "id": "pertumbuhan_ekonomi",
+        "label": "Pertumbuhan Ekonomi",
+        "description": "Laju pertumbuhan PDRB atas dasar harga konstan (tahunan).",
+        "unit": "%",
+        "bpsVar": 222,
+        "isInverse": false,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "pengangguran_tpt",
+        "label": "Tingkat Pengangguran Terbuka (TPT)",
+        "description": "Persentase jumlah pengangguran terhadap jumlah angkatan kerja.",
+        "unit": "%",
+        "bpsVar": 224,
+        "isInverse": true,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "pendapatan_per_kapita",
+        "label": "PDRB Per Kapita",
+        "description": "Rata-rata pendapatan per kapita kabupaten/kota atas dasar harga berlaku.",
+        "unit": "Ribu Rupiah",
+        "bpsVar": 440,
+        "isInverse": false,
+        "formatType": "currency",
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "ipm",
+        "label": "Indeks Pembangunan Manusia (IPM)",
+        "description": "Mengukur capaian pembangunan manusia berbasis sejumlah komponen dasar kualitas hidup.",
+        "unit": "Poin",
+        "bpsVar": 666,
+        "isInverse": false,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "aps",
+        "label": "Angka Partisipasi Sekolah (APS)",
+        "description": "Proporsi anak sekolah pada satu kelompok umur tertentu yang bersekolah pada jenjang pendidikan yang sesuai.",
+        "unit": "%",
+        "bpsVar": 122,
+        "isInverse": false,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "ipg",
+        "label": "Indeks Pembangunan Gender (IPG)",
+        "description": "Mengukur pencapaian pembangunan manusia dengan memperhatikan ketimpangan gender.",
+        "unit": "Poin",
+        "bpsVar": 506,
+        "isInverse": false,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "kemiskinan",
+        "label": "Persentase Penduduk Miskin",
+        "description": "Persentase penduduk yang berada di bawah Garis Kemiskinan.",
+        "unit": "%",
+        "bpsVar": 460,
+        "isInverse": true,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "gini_ratio",
+        "label": "Gini Ratio",
+        "description": "Mengukur tingkat ketimpangan pengeluaran secara menyeluruh.",
+        "unit": "Koefisien",
+        "bpsVar": 35,
+        "isInverse": true,
+        "source": "BPS Kepulauan Riau"
+    }
+]

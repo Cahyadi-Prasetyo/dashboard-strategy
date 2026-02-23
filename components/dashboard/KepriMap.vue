@@ -1,6 +1,19 @@
 <template>
   <div ref="mapContainer" class="relative w-full h-[calc(100vh-80px)] rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex">
 
+    <!-- Loading Overlay -->
+    <div v-if="loading" class="absolute inset-0 z-50 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <span class="text-sm text-gray-500 dark:text-gray-400">Memuat data dari BPS API...</span>
+      </div>
+    </div>
+
+    <!-- Error Banner -->
+    <div v-if="error" class="absolute top-2 left-1/2 -translate-x-1/2 z-50 bg-yellow-50 border border-yellow-200 text-yellow-700 text-xs px-3 py-1.5 rounded-lg shadow-sm">
+      ⚠️ {{ error }} (menggunakan data fallback)
+    </div>
+
     <!-- Global Tooltip Overlay -->
     <div 
       v-if="tooltip.visible"
@@ -70,27 +83,20 @@ import 'leaflet/dist/leaflet.css';
 // Import GeoJSONs
 import detailedGeoData from '~/assets/data/kabkot-2100.json';
 
-import kepriIndicatorsData from '~/server/data/kepri-indicators.json';
-
 // --- Types & Data ---
 type IndicatorConfig = {
   key: string;
   label: string;
   unit: string;
-  isInverse: boolean; // true if lower is better (e.g. poverty, unemployment)
+  isInverse: boolean;
   format?: (val: number) => string;
 };
 
-const indicatorsList: IndicatorConfig[] = [
-  { key: 'pertumbuhan_ekonomi', label: 'Pertumbuhan Ekonomi', unit: '%', isInverse: false },
-  { key: 'pengangguran_tpt', label: 'Tingkat Pengangguran (TPT)', unit: '%', isInverse: true },
-  { key: 'pendapatan_per_kapita', label: 'Pendapatan Per Kapita', unit: 'IDR', isInverse: false, format: (v) => `Rp ${(v/1000000).toFixed(1)} Jt` },
-  { key: 'ipm', label: 'Indeks Pembangunan Manusia (IPM)', unit: 'Poin', isInverse: false },
-  { key: 'aps', label: 'Angka Partisipasi Sekolah (APS)', unit: '%', isInverse: false },
-  { key: 'ipg', label: 'Indeks Pembangunan Gender (IPG)', unit: 'Poin', isInverse: false },
-  { key: 'kemiskinan', label: 'Tingkat Kemiskinan', unit: '%', isInverse: true },
-  { key: 'gini_ratio', label: 'Rasio Gini', unit: 'Ratio', isInverse: true },
-];
+// Reactive state for API data
+const loading = ref(true);
+const error = ref<string | null>(null);
+const regionsData = ref<any[]>([]);
+const indicatorsList = ref<IndicatorConfig[]>([]);
 
 const selectedIndicatorKey = ref('pertumbuhan_ekonomi');
 
@@ -114,8 +120,7 @@ const anambasTopY = ref(0);
 const updateLayoutMetrics = () => {
   if (mapContainer.value) {
     const rect = mapContainer.value.getBoundingClientRect();
-    // Anambas is the bottom half of the container
-    anambasTopY.value = rect.top + (rect.height / 2) + 12; // +12 for perfect alignment with border/padding
+    anambasTopY.value = rect.top + (rect.height / 2) + 12;
   }
 };
 
@@ -128,15 +133,59 @@ const tooltip = ref({
   subName: '',
   id: '',
   align: 'right',
-  isAnambas: false // New flag
+  isAnambas: false
 });
 
+// --- Fetch data from BPS API ---
+const fetchMapData = async () => {
+  loading.value = true;
+  error.value = null;
+  
+  try {
+    const response = await $fetch<any>('/api/bps/map-indicators');
+    
+    if (response.status === 'success') {
+      regionsData.value = response.regions;
+      
+      // Build indicatorsList from config
+      if (response.indicators && response.indicators.length > 0) {
+        indicatorsList.value = response.indicators.map((ind: any) => {
+          const config: IndicatorConfig = {
+            key: ind.id,
+            label: ind.label,
+            unit: ind.unit,
+            isInverse: ind.isInverse
+          };
+          // Add special format for currency
+          if (ind.formatType === 'currency') {
+            config.format = (v: number) => `Rp ${(v / 1000).toFixed(1)} Jt`;
+          }
+          return config;
+        });
+      }
+      
+      // Show warning if using fallback
+      if (response.source === 'fallback') {
+        error.value = 'BPS API tidak tersedia';
+      }
+    } else {
+      error.value = 'Gagal memuat data';
+    }
+  } catch (err: any) {
+    console.error('Failed to fetch map data:', err);
+    error.value = 'Gagal menghubungi server';
+  } finally {
+    loading.value = false;
+  }
+};
 
 // ... watch/lifecycle ...
 onMounted(async () => {
+  // Fetch data from API
+  await fetchMapData();
+  
   if (process.client) {
     window.addEventListener('resize', updateLayoutMetrics);
-    // Initial metric update after a small delay to ensure render
     setTimeout(updateLayoutMetrics, 500);
 
     const leafletModule = await import('leaflet');
@@ -159,21 +208,22 @@ onMounted(async () => {
 });
 
 const currentIndicator = computed(() => 
-  indicatorsList.find(i => i.key === selectedIndicatorKey.value) || indicatorsList[0]
+  indicatorsList.value.find(i => i.key === selectedIndicatorKey.value) || indicatorsList.value[0]
 );
 
 const currentGeoData = computed(() => detailedGeoData);
 
 // Helper to get indicator value for a region ID
 const getIndicatorValue = (regionId: string, key: string) => {
-  let regionData = kepriIndicatorsData.find(d => d.id === regionId);
-  return regionData?.indicators?.[key as keyof typeof regionData.indicators] || 0;
+  let regionData = regionsData.value.find(d => d.id === regionId);
+  return regionData?.indicators?.[key] || 0;
 };
 
 const currentMinMax = computed(() => {
-  const values = kepriIndicatorsData.map(d => 
-    d.indicators[selectedIndicatorKey.value as keyof typeof d.indicators] as number
+  const values = regionsData.value.map(d => 
+    (d.indicators?.[selectedIndicatorKey.value] as number) || 0
   );
+  if (values.length === 0) return { min: 0, max: 1 };
   return {
     min: Math.min(...values),
     max: Math.max(...values)
@@ -186,7 +236,7 @@ const getColor = (value: number) => {
   const range = max - min || 1; 
   let normalized = (value - min) / range; 
 
-  if (currentIndicator.value.isInverse) {
+  if (currentIndicator.value?.isInverse) {
     normalized = 1 - normalized; 
   }
 
@@ -214,8 +264,8 @@ const styleFeature = (feature: any) => {
     opacity: 1,
     color: 'white',
     dashArray: '',
-    fillOpacity: 1, // Full opacity for "No Tiles" look
-    className: 'cursor-pointer' // Add pointer cursor
+    fillOpacity: 1,
+    className: 'cursor-pointer'
   };
 };
 
@@ -250,7 +300,7 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
       const regionName = getRegionName(feature);
       const subName = feature.properties.nmdesa; 
       
-      // Global Tooltip Logic (Instead of bindTooltip)
+      // Global Tooltip Logic
       layer.on({
         mouseover: (e: any) => {
           const layer = e.target;
@@ -263,10 +313,8 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
           
           const clientX = e.originalEvent.clientX;
           const isRightSide = clientX > window.innerWidth / 2;
-          // CheckAnambas
           const isAnambasFeature = isAnambas(feature);
 
-          // Show Tooltip
           tooltip.value = {
             visible: true,
             x: clientX,
@@ -282,7 +330,6 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
           const clientX = e.originalEvent.clientX;
           const isRightSide = clientX > window.innerWidth / 2;
           
-          // Update position to follow mouse
           tooltip.value.x = clientX;
           tooltip.value.y = e.originalEvent.clientY;
           tooltip.value.align = isRightSide ? 'left' : 'right';
@@ -291,7 +338,6 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
         mouseout: (e: any) => {
             const originalStyle = styleFeature(feature);
             layer.setStyle(originalStyle);
-            // Hide Tooltip
             tooltip.value.visible = false;
         },
         click: (e: any) => {
@@ -301,7 +347,6 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
     }
   }).addTo(mapInstance);
 
-  // Fit bounds if layer has layers 
   if (autoFit && newLayer.getLayers().length > 0) {
      mapInstance.fitBounds(newLayer.getBounds(), { padding: [20, 20] });
   }
@@ -310,24 +355,20 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
 };
 
 const updateAllMaps = () => {
-  // Main Map: Manual view for better focus on Batam/Bintan/Lingga
   mainLayer = updateLayerForMap(mainMap, isMainIsland, mainLayer, false);
   if (mainMap) {
-      // Shifted slightly down-right to center the group better
       mainMap.setView([0.30, 103.75], 8.7); 
   }
 
-  // Natuna: Manual focus on "Big Island" (Natuna Besar)
-  natunaLayer = updateLayerForMap(natunaMap, isNatuna, natunaLayer, false); // false = no auto fit
+  natunaLayer = updateLayerForMap(natunaMap, isNatuna, natunaLayer, false);
   if (natunaMap) {
-      natunaMap.setView([3.95, 108.20], 8.8); // Focus on Ranai/Natuna Besar
+      natunaMap.setView([3.95, 108.20], 8.8);
   }
 
-  // Anambas: Auto Fit is fine, but maybe zoom out slightly? Keep auto for now.
   anambasLayer = updateLayerForMap(anambasMap, isAnambas, anambasLayer, true);
 };
 
-// Cleanup maps on unmount to separate garbage collection
+// Cleanup maps on unmount
 onUnmounted(() => {
   if (mainMap) mainMap.remove();
   if (natunaMap) natunaMap.remove();

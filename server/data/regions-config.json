@@ -1,0 +1,74 @@
+[
+    {
+        "id": "2100",
+        "name": "Provinsi Kepulauan Riau",
+        "type": "provinsi",
+        "coords": [
+            1.0456,
+            104.4497
+        ]
+    },
+    {
+        "id": "2101",
+        "name": "Kab. Karimun",
+        "type": "kabupaten",
+        "coords": [
+            0.9996,
+            103.4285
+        ]
+    },
+    {
+        "id": "2102",
+        "name": "Kab. Bintan",
+        "type": "kabupaten",
+        "coords": [
+            1.1378,
+            104.5369
+        ]
+    },
+    {
+        "id": "2103",
+        "name": "Kab. Natuna",
+        "type": "kabupaten",
+        "coords": [
+            3.9392,
+            108.2039
+        ]
+    },
+    {
+        "id": "2104",
+        "name": "Kab. Lingga",
+        "type": "kabupaten",
+        "coords": [
+            -0.2173,
+            104.6293
+        ]
+    },
+    {
+        "id": "2105",
+        "name": "Kab. Kepulauan Anambas",
+        "type": "kabupaten",
+        "coords": [
+            3.2384,
+            106.1152
+        ]
+    },
+    {
+        "id": "2171",
+        "name": "Kota Batam",
+        "type": "kota",
+        "coords": [
+            1.0456,
+            104.0305
+        ]
+    },
+    {
+        "id": "2172",
+        "name": "Kota Tanjung Pinang",
+        "type": "kota",
+        "coords": [
+            0.9165,
+            104.4497
+        ]
+    }
+]
