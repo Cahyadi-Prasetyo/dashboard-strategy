@@ -435,12 +435,8 @@ const getIndicatorValue = (regionId: string, key: string) => {
 
 const currentMinMax = computed(() => {
   const values = regionsData.value.map(d => {
-    const rawValue = d.indicators?.[selectedIndicatorKey.value];
-    // Handle nested triwulanan objects
-    if (rawValue && typeof rawValue === 'object' && !Array.isArray(rawValue)) {
-      return (rawValue[selectedTriwulan.value] as number) ?? 0;
-    }
-    return (rawValue as number) || 0;
+    // Always use annual pertumbuhan_ekonomi for map coloring
+    return (d.indicators?.['pertumbuhan_ekonomi'] as number) || 0;
   });
   if (values.length === 0) return { min: 0, max: 1 };
   return {
@@ -453,12 +449,9 @@ const currentMinMax = computed(() => {
 const getColor = (value: number) => {
   const { min, max } = currentMinMax.value;
   const range = max - min || 1; 
-  let normalized = (value - min) / range; 
+  const normalized = (value - min) / range; 
 
-  if (currentIndicator.value?.isInverse) {
-    normalized = 1 - normalized; 
-  }
-
+  // hue 0 = red (lowest), hue 120 = green (highest)
   const hue = normalized * 120; 
   return `hsl(${hue}, 80%, 45%)`; 
 };
@@ -474,7 +467,8 @@ const getRegionName = (feature: any) => {
 
 const styleFeature = (feature: any) => {
   const id = getFeatureId(feature);
-  const value = getIndicatorValue(id, selectedIndicatorKey.value);
+  // Always color by annual pertumbuhan_ekonomi
+  const value = getIndicatorValue(id, 'pertumbuhan_ekonomi');
   const color = getColor(value);
 
   return {

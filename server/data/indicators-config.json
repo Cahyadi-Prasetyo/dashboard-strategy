@@ -1,5 +1,14 @@
 [
     {
+        "id": "pertumbuhan_ekonomi",
+        "label": "Pertumbuhan Ekonomi (Tahunan)",
+        "description": "Laju pertumbuhan PDRB tahunan kabupaten/kota.",
+        "unit": "%",
+        "bpsVar": 222,
+        "isInverse": false,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
         "id": "pertumbuhan_ekonomi_ctoc",
         "label": "Pertumbuhan Ekonomi (C-to-C)",
         "description": "Laju pertumbuhan PDRB triwulanan kumulatif (cumulative to cumulative).",
