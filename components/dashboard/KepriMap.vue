@@ -64,22 +64,17 @@
         v-for="row in triwulanDetailData" 
         :key="row.key"
         class="grid grid-cols-5 gap-0 text-[11px] py-1 border-b border-gray-50 dark:border-gray-800 last:border-0 rounded transition-colors"
-        :class="row.key === selectedIndicatorKey ? 'bg-blue-50 dark:bg-blue-900/20 font-semibold' : ''"
       >
-        <div class="text-left text-xs" :class="row.key === selectedIndicatorKey ? 'text-blue-700 dark:text-blue-300' : 'text-gray-600 dark:text-gray-300'">
+        <div class="text-left text-xs text-gray-600 dark:text-gray-300">
           {{ row.shortLabel }}
         </div>
         <div 
           v-for="tw in triwulanOptions" 
           :key="tw.key" 
           class="text-center tabular-nums"
-          :class="[
-            row.key === selectedIndicatorKey && selectedTriwulan === tw.key 
-              ? 'text-blue-700 dark:text-blue-300 font-bold' 
-              : row.key === selectedIndicatorKey 
-                ? 'text-blue-600 dark:text-blue-400' 
-                : 'text-gray-500 dark:text-gray-400'
-          ]"
+          :class="selectedTriwulan === tw.key 
+            ? 'text-blue-700 dark:text-blue-300 font-bold' 
+            : 'text-gray-500 dark:text-gray-400'"
         >
           {{ row.values[tw.key] ?? '-' }}%
         </div>
@@ -93,37 +88,17 @@
       :style="{ left: cursorPos.x + 'px', top: cursorPos.y + 'px' }"
     ></div>
 
-    <!-- Indicator Selector -->
-    <div class="absolute top-4 left-4 z-[500] flex items-center gap-2 flex-wrap">
+    <!-- Triwulan Selector Dropdown -->
+    <div class="absolute top-4 left-4 z-500 flex items-center gap-2 flex-wrap">
+      <span class="text-xs font-medium text-gray-600 dark:text-gray-300 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2">Triwulan:</span>
       <select 
-        v-model="selectedIndicatorKey"
-        class="text-xs bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2 font-medium text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-[280px]"
+        v-model="selectedTriwulan"
+        class="text-xs bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2 font-medium text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
-        <option v-for="ind in pertumbuhanOptions" :key="ind.key" :value="ind.key">
-          {{ ind.label }}
+        <option v-for="tw in triwulanOptions" :key="tw.key" :value="tw.key">
+          {{ tw.label }}
         </option>
       </select>
-
-      <!-- Triwulan Selector (visible only when triwulanan indicator is selected) -->
-      <div 
-        v-if="isTriwulananIndicator"
-        class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-1.5 flex items-center gap-2"
-      >
-        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Triwulan:</span>
-        <div class="flex gap-1">
-          <button 
-            v-for="tw in triwulanOptions" 
-            :key="tw.key"
-            @click="selectedTriwulan = tw.key"
-            class="text-xs px-2.5 py-1 rounded-md font-medium transition-all duration-150"
-            :class="selectedTriwulan === tw.key 
-              ? 'bg-blue-600 text-white shadow-sm' 
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'"
-          >
-            {{ tw.label }}
-          </button>
-        </div>
-      </div>
     </div>
 
     <!-- Main Map Container (Left/Center - Batam, Bintan, Lingga, Karimun) -->
