@@ -7,7 +7,25 @@
             103.4285
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 4.5,
+            "pertumbuhan_ekonomi": 6.45,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": 4.82,
+                "tw2": 5.64,
+                "tw3": 6.12,
+                "tw4": 6.45
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -1.95,
+                "tw2": 3.12,
+                "tw3": 1.24,
+                "tw4": 5.87
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": 4.82,
+                "tw2": 6.03,
+                "tw3": 6.48,
+                "tw4": 6.45
+            },
             "pengangguran_tpt": 6.2,
             "pendapatan_per_kapita": 69608000,
             "ipm": 72.8,
@@ -25,7 +43,25 @@
             104.5369
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 5.1,
+            "pertumbuhan_ekonomi": 8.89,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": 6.74,
+                "tw2": 7.85,
+                "tw3": 8.41,
+                "tw4": 8.89
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -0.52,
+                "tw2": 4.63,
+                "tw3": 2.18,
+                "tw4": 9.12
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": 6.74,
+                "tw2": 8.25,
+                "tw3": 8.92,
+                "tw4": 8.89
+            },
             "pengangguran_tpt": 5.8,
             "pendapatan_per_kapita": 180544000,
             "ipm": 74.5,
@@ -43,7 +79,25 @@
             108.2039
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 3.8,
+            "pertumbuhan_ekonomi": -3.57,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": -1.24,
+                "tw2": -2.15,
+                "tw3": -2.98,
+                "tw4": -3.57
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -5.82,
+                "tw2": -1.43,
+                "tw3": -2.67,
+                "tw4": 1.25
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": -1.24,
+                "tw2": -3.45,
+                "tw3": -3.82,
+                "tw4": -3.57
+            },
             "pengangguran_tpt": 4.5,
             "pendapatan_per_kapita": 264903000,
             "ipm": 70.2,
@@ -61,7 +115,25 @@
             104.6293
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 3.5,
+            "pertumbuhan_ekonomi": 4.42,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": 3.15,
+                "tw2": 3.78,
+                "tw3": 4.12,
+                "tw4": 4.42
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -2.34,
+                "tw2": 2.85,
+                "tw3": 0.52,
+                "tw4": 4.93
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": 3.15,
+                "tw2": 4.52,
+                "tw3": 4.38,
+                "tw4": 4.42
+            },
             "pengangguran_tpt": 4.2,
             "pendapatan_per_kapita": 54936000,
             "ipm": 68.9,
@@ -79,7 +151,25 @@
             106.1152
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 3.9,
+            "pertumbuhan_ekonomi": -5.67,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": -2.85,
+                "tw2": -3.92,
+                "tw3": -4.78,
+                "tw4": -5.67
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -7.14,
+                "tw2": -2.35,
+                "tw3": -3.42,
+                "tw4": 0.58
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": -2.85,
+                "tw2": -4.86,
+                "tw3": -5.34,
+                "tw4": -5.67
+            },
             "pengangguran_tpt": 4.8,
             "pendapatan_per_kapita": 362072000,
             "ipm": 69.5,
@@ -97,7 +187,25 @@
             104.0305
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 6.8,
+            "pertumbuhan_ekonomi": 6.69,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": 5.12,
+                "tw2": 5.93,
+                "tw3": 6.35,
+                "tw4": 6.69
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -1.68,
+                "tw2": 3.45,
+                "tw3": 1.52,
+                "tw4": 6.24
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": 5.12,
+                "tw2": 6.38,
+                "tw3": 6.75,
+                "tw4": 6.69
+            },
             "pengangguran_tpt": 7.5,
             "pendapatan_per_kapita": 182507000,
             "ipm": 81.2,
@@ -115,7 +223,25 @@
             104.4497
         ],
         "indicators": {
-            "pertumbuhan_ekonomi": 5.5,
+            "pertumbuhan_ekonomi": 3.78,
+            "pertumbuhan_ekonomi_ctoc": {
+                "tw1": 2.56,
+                "tw2": 3.12,
+                "tw3": 3.48,
+                "tw4": 3.78
+            },
+            "pertumbuhan_ekonomi_qtq": {
+                "tw1": -3.15,
+                "tw2": 1.87,
+                "tw3": 0.35,
+                "tw4": 4.15
+            },
+            "pertumbuhan_ekonomi_yoy": {
+                "tw1": 2.56,
+                "tw2": 3.78,
+                "tw3": 3.62,
+                "tw4": 3.78
+            },
             "pengangguran_tpt": 6.0,
             "pendapatan_per_kapita": 105384000,
             "ipm": 79.5,

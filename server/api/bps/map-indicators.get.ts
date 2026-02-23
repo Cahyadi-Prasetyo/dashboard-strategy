@@ -154,14 +154,14 @@ export default defineEventHandler(async (event) => {
         // Step 2: Transform into per-region format (same as kepri-indicators.json)
         const kabkotIds = (regionsConfig as any[]).filter((r: any) => r.type !== 'provinsi').map((r: any) => r.id);
         const regions = kabkotIds.map(regionId => {
-            const indicators: Record<string, number> = {};
+            const indicators: Record<string, any> = {};
 
             for (const indicator of indicatorsConfig as any[]) {
                 const regionValues = indicatorDataMap[indicator.id];
                 if (regionValues && regionValues[regionId] !== undefined) {
                     indicators[indicator.id] = regionValues[regionId];
                 } else {
-                    // Fallback to local data for this indicator
+                    // Fallback to local data for this indicator (supports nested triwulanan objects)
                     const fallbackRegion = fallbackData.find((d: any) => d.id === regionId);
                     indicators[indicator.id] = fallbackRegion?.indicators?.[indicator.id as keyof typeof fallbackRegion.indicators] ?? 0;
                 }

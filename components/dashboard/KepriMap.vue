@@ -14,32 +14,74 @@
       ⚠️ {{ error }} (menggunakan data fallback)
     </div>
 
-    <!-- Global Tooltip Overlay -->
+    <!-- Global Tooltip Overlay (Fixed Position) -->
     <div 
       v-if="tooltip.visible"
-      class="fixed z-[9999] pointer-events-none bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl px-4 py-3 min-w-[300px] transition-opacity duration-75"
-      :style="{ 
-        top: tooltip.isAnambas ? anambasTopY + 'px' : (tooltip.y + 15) + 'px', 
-        left: tooltip.align === 'left' ? (tooltip.x - 15) + 'px' : (tooltip.x + 15) + 'px',
-        transform: tooltip.align === 'left' ? 'translateX(-100%)' : 'none'
-      }"
+      class="fixed z-[9999] pointer-events-none bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl px-4 py-3 min-w-[280px] transition-all duration-150"
+      :style="tooltipStyle"
     >
       <div class="font-bold text-gray-800 dark:text-gray-100 text-sm mb-1">{{ tooltip.name }}</div>
       <div v-if="tooltip.subName" class="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3 pb-1 border-b border-gray-100 dark:border-gray-700">{{ tooltip.subName }}</div>
       
-      <div class="flex flex-col gap-1">
+      <div class="flex flex-col gap-0.5">
         <div 
-          v-for="ind in indicatorsList" 
+          v-for="ind in tooltipDisplayList" 
           :key="ind.key"
-          class="flex justify-between items-center text-xs py-1 border-b border-gray-100 dark:border-gray-800 last:border-0 px-1 rounded hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
-          :class="ind.key === selectedIndicatorKey ? 'bg-blue-50 dark:bg-blue-900/20 font-semibold' : ''"
+          class="flex justify-between items-center text-xs py-1 border-b border-gray-100 dark:border-gray-800 last:border-0 px-1 rounded transition-colors"
+          :class="ind.isActive ? 'bg-blue-50 dark:bg-blue-900/20 font-semibold' : ''"
         >
-          <span class="mr-3 text-left w-36 truncate" :class="ind.key === selectedIndicatorKey ? 'text-blue-700 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400'">
-            {{ ind.label }}
+          <span class="mr-3 text-left" :class="ind.isActive ? 'text-blue-700 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400'">
+            {{ ind.shortLabel }}
           </span>
-          <span class="text-right font-medium whitespace-nowrap" :class="ind.key === selectedIndicatorKey ? 'text-blue-700 dark:text-blue-300' : 'text-gray-700 dark:text-gray-200'">
-            {{ ind.format ? ind.format(getIndicatorValue(tooltip.id, ind.key)) : `${getIndicatorValue(tooltip.id, ind.key)} ${ind.unit}` }}
+          <span class="text-right font-medium whitespace-nowrap" :class="ind.isActive ? 'text-blue-700 dark:text-blue-300' : 'text-gray-700 dark:text-gray-200'">
+            {{ ind.displayValue }}
           </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Triwulan Detail Card (appears below main tooltip) -->
+    <div 
+      v-if="tooltip.visible"
+      class="fixed z-[9999] pointer-events-none bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl px-4 py-3 min-w-[280px] transition-all duration-150"
+      :style="triwulanCardStyle"
+    >
+      <div class="font-bold text-gray-800 dark:text-gray-100 text-xs mb-2 flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+        Detail Triwulan — Pertumbuhan Ekonomi
+      </div>
+
+      <!-- Table Header -->
+      <div class="grid grid-cols-5 gap-0 text-[10px] font-semibold text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-1">
+        <div class="text-left">Metrik</div>
+        <div v-for="tw in triwulanOptions" :key="tw.key" class="text-center" :class="selectedTriwulan === tw.key ? 'text-blue-600 dark:text-blue-400' : ''">
+          {{ tw.label }}
+        </div>
+      </div>
+
+      <!-- Data Rows -->
+      <div 
+        v-for="row in triwulanDetailData" 
+        :key="row.key"
+        class="grid grid-cols-5 gap-0 text-[11px] py-1 border-b border-gray-50 dark:border-gray-800 last:border-0 rounded transition-colors"
+        :class="row.key === selectedIndicatorKey ? 'bg-blue-50 dark:bg-blue-900/20 font-semibold' : ''"
+      >
+        <div class="text-left text-xs" :class="row.key === selectedIndicatorKey ? 'text-blue-700 dark:text-blue-300' : 'text-gray-600 dark:text-gray-300'">
+          {{ row.shortLabel }}
+        </div>
+        <div 
+          v-for="tw in triwulanOptions" 
+          :key="tw.key" 
+          class="text-center tabular-nums"
+          :class="[
+            row.key === selectedIndicatorKey && selectedTriwulan === tw.key 
+              ? 'text-blue-700 dark:text-blue-300 font-bold' 
+              : row.key === selectedIndicatorKey 
+                ? 'text-blue-600 dark:text-blue-400' 
+                : 'text-gray-500 dark:text-gray-400'
+          ]"
+        >
+          {{ row.values[tw.key] ?? '-' }}%
         </div>
       </div>
     </div>
@@ -48,8 +90,41 @@
     <div 
       v-if="tooltip.visible"
       class="fixed z-[10000] w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-md pointer-events-none transform -translate-x-1/2 -translate-y-1/2 animate-pulse"
-      :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }"
+      :style="{ left: cursorPos.x + 'px', top: cursorPos.y + 'px' }"
     ></div>
+
+    <!-- Indicator Selector -->
+    <div class="absolute top-4 left-4 z-[500] flex items-center gap-2 flex-wrap">
+      <select 
+        v-model="selectedIndicatorKey"
+        class="text-xs bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2 font-medium text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-[280px]"
+      >
+        <option v-for="ind in pertumbuhanOptions" :key="ind.key" :value="ind.key">
+          {{ ind.label }}
+        </option>
+      </select>
+
+      <!-- Triwulan Selector (visible only when triwulanan indicator is selected) -->
+      <div 
+        v-if="isTriwulananIndicator"
+        class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-1.5 flex items-center gap-2"
+      >
+        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">Triwulan:</span>
+        <div class="flex gap-1">
+          <button 
+            v-for="tw in triwulanOptions" 
+            :key="tw.key"
+            @click="selectedTriwulan = tw.key"
+            class="text-xs px-2.5 py-1 rounded-md font-medium transition-all duration-150"
+            :class="selectedTriwulan === tw.key 
+              ? 'bg-blue-600 text-white shadow-sm' 
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'"
+          >
+            {{ tw.label }}
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Map Container (Left/Center - Batam, Bintan, Lingga, Karimun) -->
     <div id="main-map" class="flex-1 h-full z-0 relative"></div>
@@ -98,8 +173,118 @@ const error = ref<string | null>(null);
 const regionsData = ref<any[]>([]);
 const indicatorsList = ref<IndicatorConfig[]>([]);
 
-const selectedIndicatorKey = ref('pertumbuhan_ekonomi');
+const selectedIndicatorKey = ref('pertumbuhan_ekonomi_ctoc');
+const selectedTriwulan = ref('tw4'); // Default to latest quarter
 
+// Triwulan options
+const triwulanOptions = [
+  { key: 'tw1', label: 'TW I' },
+  { key: 'tw2', label: 'TW II' },
+  { key: 'tw3', label: 'TW III' },
+  { key: 'tw4', label: 'TW IV' }
+];
+
+// Check if current indicator is triwulanan
+const isTriwulananIndicator = computed(() => {
+  const ind = indicatorsList.value.find(i => i.key === selectedIndicatorKey.value);
+  return (ind as any)?.isTriwulanan === true;
+});
+
+// Dropdown: only pertumbuhan ekonomi variants
+const pertumbuhanOptions = computed(() => {
+  return indicatorsList.value.filter(i => i.key.startsWith('pertumbuhan_ekonomi'));
+});
+
+// Tooltip: 8 concise indicators for display
+const tooltipDisplayList = computed(() => {
+  const regionId = tooltip.value.id;
+  if (!regionId) return [];
+  
+  // The 8 strategic indicators with short labels
+  const items = [
+    { 
+      key: 'pertumbuhan_ekonomi', 
+      shortLabel: 'Pertumbuhan Ekonomi', 
+      unit: '%',
+      // Show value from the currently active sub-indicator
+      getValue: () => getIndicatorValue(regionId, selectedIndicatorKey.value),
+      isActive: true // always highlighted since it's the map indicator
+    },
+    { key: 'pengangguran_tpt', shortLabel: 'Tingkat Pengangguran (TPT)', unit: '%' },
+    { key: 'pendapatan_per_kapita', shortLabel: 'PDRB Per Kapita', unit: '', format: (v: number) => `Rp ${(v / 1000).toFixed(1)} Jt` },
+    { key: 'ipm', shortLabel: 'IPM', unit: 'Poin' },
+    { key: 'aps', shortLabel: 'APS', unit: '%' },
+    { key: 'ipg', shortLabel: 'IPG', unit: 'Poin' },
+    { key: 'kemiskinan', shortLabel: 'Penduduk Miskin', unit: '%' },
+    { key: 'gini_ratio', shortLabel: 'Rasio Gini', unit: 'Koefisien' }
+  ];
+  
+  return items.map(item => {
+    const value = item.getValue ? item.getValue() : getIndicatorValue(regionId, item.key);
+    const displayValue = item.format ? item.format(value) : `${value} ${item.unit}`;
+    return {
+      key: item.key,
+      shortLabel: item.shortLabel,
+      displayValue,
+      isActive: item.isActive || false
+    };
+  });
+});
+
+//get raw triwulanan object for a region
+const getRawTriwulanData = (regionId: string, key: string) => {
+  const regionData = regionsData.value.find(d => d.id === regionId);
+  const rawValue = regionData?.indicators?.[key];
+  if (rawValue && typeof rawValue === 'object' && !Array.isArray(rawValue)) {
+    return rawValue;
+  }
+  return null;
+};
+
+// Triwulan detail rows for the second card
+const triwulanDetailData = computed(() => {
+  const regionId = tooltip.value.id;
+  if (!regionId) return [];
+  
+  const metrics = [
+    { key: 'pertumbuhan_ekonomi_ctoc', shortLabel: 'C-to-C' },
+    { key: 'pertumbuhan_ekonomi_qtq', shortLabel: 'Q-to-Q' },
+    { key: 'pertumbuhan_ekonomi_yoy', shortLabel: 'Y-on-Y' }
+  ];
+  
+  return metrics.map(m => ({
+    key: m.key,
+    shortLabel: m.shortLabel,
+    values: getRawTriwulanData(regionId, m.key) || {}
+  }));
+});
+
+// Style for the triwulan detail card (positioned below the main tooltip)
+const triwulanCardStyle = computed(() => {
+  const { x, y, align, anchorBottom } = tooltip.value;
+  const style: Record<string, string> = {};
+  const MAIN_CARD_WIDTH = 310; // approximate width of main tooltip card
+  
+  // Position beside the main card (same vertical, offset horizontal)
+  if (align === 'left') {
+    // Main card is to the left of anchor — put detail card further left
+    style.left = (x - MAIN_CARD_WIDTH - 25) + 'px';
+    style.transform = 'translateX(-100%)';
+  } else {
+    // Main card is to the right of anchor — put detail card further right
+    style.left = (x + MAIN_CARD_WIDTH + 25) + 'px';
+    style.transform = 'none';
+  }
+  
+  // Same vertical position as the main tooltip
+  if (anchorBottom) {
+    style.bottom = (window.innerHeight - y + 15) + 'px';
+  } else {
+    style.top = (y + 15) + 'px';
+  }
+  
+  return style;
+});
 
 // 3 Map Instances
 let mainMap: any = null;
@@ -114,17 +299,8 @@ let anambasLayer: any = null;
 let L: any = null;
 
 const mapContainer = ref<HTMLElement | null>(null);
-const anambasTopY = ref(0);
 
-// Update Anambas Top Position on resize/mount
-const updateLayoutMetrics = () => {
-  if (mapContainer.value) {
-    const rect = mapContainer.value.getBoundingClientRect();
-    anambasTopY.value = rect.top + (rect.height / 2) + 12;
-  }
-};
-
-// --- Tooltip State ---
+// --- Tooltip State (fixed position) ---
 const tooltip = ref({
   visible: false,
   x: 0,
@@ -132,9 +308,64 @@ const tooltip = ref({
   name: '',
   subName: '',
   id: '',
-  align: 'right',
-  isAnambas: false
+  align: 'right' as 'left' | 'right',
+  anchorBottom: false
 });
+
+// Separate cursor position for blue dot
+const cursorPos = ref({ x: 0, y: 0 });
+
+// Tooltip estimated dimensions for boundary checking
+const TOOLTIP_WIDTH = 320;
+const TOOLTIP_HEIGHT = 420;
+
+// Computed tooltip style with smart boundary detection
+const tooltipStyle = computed(() => {
+  const { x, y, align, anchorBottom } = tooltip.value;
+  const style: Record<string, string> = {};
+  
+  // Horizontal positioning
+  if (align === 'left') {
+    style.left = (x - 15) + 'px';
+    style.transform = 'translateX(-100%)';
+  } else {
+    style.left = (x + 15) + 'px';
+    style.transform = 'none';
+  }
+  
+  // Vertical positioning — anchor from bottom if it would clip
+  if (anchorBottom) {
+    style.bottom = (window.innerHeight - y + 15) + 'px';
+  } else {
+    style.top = (y + 15) + 'px';
+  }
+  
+  return style;
+});
+
+/**
+ * Calculate a fixed screen position from the layer's geographic bounds center.
+ * Ensures the tooltip won't be clipped by viewport edges.
+ */
+const calcFixedTooltipPos = (layer: any, mapInstance: any) => {
+  const bounds = layer.getBounds();
+  const center = bounds.getCenter();
+  const containerPoint = mapInstance.latLngToContainerPoint(center);
+  const mapRect = mapInstance.getContainer().getBoundingClientRect();
+  
+  const screenX = mapRect.left + containerPoint.x;
+  const screenY = mapRect.top + containerPoint.y;
+  
+  // Smart horizontal alignment
+  const spaceRight = window.innerWidth - screenX;
+  const spaceLeft = screenX;
+  const align: 'left' | 'right' = spaceRight < TOOLTIP_WIDTH + 30 ? 'left' : 'right';
+  
+  // Smart vertical: if tooltip would clip bottom, anchor from bottom instead
+  const anchorBottom = (screenY + TOOLTIP_HEIGHT + 30) > window.innerHeight;
+  
+  return { x: screenX, y: screenY, align, anchorBottom };
+};
 
 // --- Fetch data from BPS API ---
 const fetchMapData = async () => {
@@ -150,11 +381,12 @@ const fetchMapData = async () => {
       // Build indicatorsList from config
       if (response.indicators && response.indicators.length > 0) {
         indicatorsList.value = response.indicators.map((ind: any) => {
-          const config: IndicatorConfig = {
+          const config: any = {
             key: ind.id,
             label: ind.label,
             unit: ind.unit,
-            isInverse: ind.isInverse
+            isInverse: ind.isInverse,
+            isTriwulanan: ind.isTriwulanan || false
           };
           // Add special format for currency
           if (ind.formatType === 'currency') {
@@ -185,9 +417,6 @@ onMounted(async () => {
   await fetchMapData();
   
   if (process.client) {
-    window.addEventListener('resize', updateLayoutMetrics);
-    setTimeout(updateLayoutMetrics, 500);
-
     const leafletModule = await import('leaflet');
     L = leafletModule.default || leafletModule;
 
@@ -214,15 +443,28 @@ const currentIndicator = computed(() =>
 const currentGeoData = computed(() => detailedGeoData);
 
 // Helper to get indicator value for a region ID
+// Handles both flat values and nested triwulanan objects
 const getIndicatorValue = (regionId: string, key: string) => {
   let regionData = regionsData.value.find(d => d.id === regionId);
-  return regionData?.indicators?.[key] || 0;
+  const rawValue = regionData?.indicators?.[key];
+  
+  // If the value is an object (triwulanan), pick the selected triwulan
+  if (rawValue && typeof rawValue === 'object' && !Array.isArray(rawValue)) {
+    return rawValue[selectedTriwulan.value] ?? 0;
+  }
+  
+  return rawValue || 0;
 };
 
 const currentMinMax = computed(() => {
-  const values = regionsData.value.map(d => 
-    (d.indicators?.[selectedIndicatorKey.value] as number) || 0
-  );
+  const values = regionsData.value.map(d => {
+    const rawValue = d.indicators?.[selectedIndicatorKey.value];
+    // Handle nested triwulanan objects
+    if (rawValue && typeof rawValue === 'object' && !Array.isArray(rawValue)) {
+      return (rawValue[selectedTriwulan.value] as number) ?? 0;
+    }
+    return (rawValue as number) || 0;
+  });
   if (values.length === 0) return { min: 0, max: 1 };
   return {
     min: Math.min(...values),
@@ -300,7 +542,7 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
       const regionName = getRegionName(feature);
       const subName = feature.properties.nmdesa; 
       
-      // Global Tooltip Logic
+      // Global Tooltip Logic (Fixed Position)
       layer.on({
         mouseover: (e: any) => {
           const layer = e.target;
@@ -311,29 +553,32 @@ const updateLayerForMap = (mapInstance: any, filterFn: (f: any) => boolean, exis
           });
           layer.bringToFront();
           
-          const clientX = e.originalEvent.clientX;
-          const isRightSide = clientX > window.innerWidth / 2;
-          const isAnambasFeature = isAnambas(feature);
+          // Calculate fixed position from layer bounds center
+          const pos = calcFixedTooltipPos(layer, mapInstance);
+          
+          // Set cursor position
+          cursorPos.value = {
+            x: e.originalEvent.clientX,
+            y: e.originalEvent.clientY
+          };
 
           tooltip.value = {
             visible: true,
-            x: clientX,
-            y: e.originalEvent.clientY,
+            x: pos.x,
+            y: pos.y,
             name: regionName,
             subName: subName,
             id: id,
-            align: isRightSide ? 'left' : 'right',
-            isAnambas: isAnambasFeature
+            align: pos.align,
+            anchorBottom: pos.anchorBottom
           };
         },
         mousemove: (e: any) => {
-          const clientX = e.originalEvent.clientX;
-          const isRightSide = clientX > window.innerWidth / 2;
-          
-          tooltip.value.x = clientX;
-          tooltip.value.y = e.originalEvent.clientY;
-          tooltip.value.align = isRightSide ? 'left' : 'right';
-          tooltip.value.isAnambas = isAnambas(feature);
+          // Only update blue dot cursor position, NOT tooltip position
+          cursorPos.value = {
+            x: e.originalEvent.clientX,
+            y: e.originalEvent.clientY
+          };
         },
         mouseout: (e: any) => {
             const originalStyle = styleFeature(feature);
@@ -375,7 +620,7 @@ onUnmounted(() => {
   if (anambasMap) anambasMap.remove();
 });
 
-watch([selectedIndicatorKey], () => {
+watch([selectedIndicatorKey, selectedTriwulan], () => {
   updateAllMaps();
 });
 </script>

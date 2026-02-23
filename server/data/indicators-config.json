@@ -1,11 +1,32 @@
 [
     {
-        "id": "pertumbuhan_ekonomi",
-        "label": "Pertumbuhan Ekonomi",
-        "description": "Laju pertumbuhan PDRB atas dasar harga konstan (tahunan).",
+        "id": "pertumbuhan_ekonomi_ctoc",
+        "label": "Pertumbuhan Ekonomi (C-to-C)",
+        "description": "Laju pertumbuhan PDRB triwulanan kumulatif (cumulative to cumulative).",
         "unit": "%",
-        "bpsVar": 222,
+        "bpsVar": 274,
         "isInverse": false,
+        "isTriwulanan": true,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "pertumbuhan_ekonomi_qtq",
+        "label": "Pertumbuhan Ekonomi (Q-to-Q)",
+        "description": "Laju pertumbuhan PDRB triwulanan dibanding triwulan sebelumnya (quarter to quarter).",
+        "unit": "%",
+        "bpsVar": 274,
+        "isInverse": false,
+        "isTriwulanan": true,
+        "source": "BPS Kepulauan Riau"
+    },
+    {
+        "id": "pertumbuhan_ekonomi_yoy",
+        "label": "Pertumbuhan Ekonomi (Y-on-Y)",
+        "description": "Laju pertumbuhan PDRB triwulanan dibanding triwulan yang sama tahun sebelumnya (year on year).",
+        "unit": "%",
+        "bpsVar": 274,
+        "isInverse": false,
+        "isTriwulanan": true,
         "source": "BPS Kepulauan Riau"
     },
     {
