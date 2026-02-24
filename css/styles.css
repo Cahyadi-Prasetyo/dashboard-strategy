@@ -1,0 +1,523 @@
+/* ============================================================
+   Dashboard Strategis Kepulauan Riau
+   Dark Vibrant Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* === Reset & Base === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg-primary: #0B1426;
+    --bg-secondary: #111D35;
+    --bg-card: #162040;
+    --bg-card-hover: #1C2A50;
+    --bg-input: #1A2744;
+    --border: #2A3F6B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --accent-blue: #3B82F6;
+    --accent-cyan: #06B6D4;
+    --accent-green: #10B981;
+    --accent-amber: #F59E0B;
+    --accent-red: #EF4444;
+    --accent-violet: #8B5CF6;
+    --accent-pink: #EC4899;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --transition: all 0.25s ease;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* === Header === */
+.header {
+    background: linear-gradient(135deg, #0F1D35 0%, #162040 50%, #1A2744 100%);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.header-inner {
+    padding: 16px 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: contain;
+    background: white;
+    padding: 4px;
+}
+
+.header-title {
+    flex: 1;
+}
+
+.header-title h1 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, #F1F5F9, #94A3B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-title p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* === Filter Bar === */
+.filter-bar {
+    background: var(--bg-secondary);
+}
+
+.filter-bar-inner {
+    padding: 14px 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-group label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.filter-group select {
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 32px 8px 12px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    min-width: 160px;
+}
+
+.filter-group select:hover {
+    border-color: var(--accent-blue);
+    background-color: #1E3055;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* === Main Content === */
+.main-content {
+    padding: 24px 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* === Map Section === */
+.map-section {
+    margin-bottom: 28px;
+}
+
+.map-section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-container-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    height: 520px;
+}
+
+.map-main {
+    grid-row: 1 / 3;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+}
+
+.map-natuna {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+}
+
+.map-anambas {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+}
+
+.map-label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 500;
+    background: var(--bg-card);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.leaflet-container {
+    background: var(--bg-card) !important;
+    width: 100%;
+    height: 100%;
+}
+
+/* === Legend === */
+.map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.legend-item:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+}
+
+.legend-item.active {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--text-primary);
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* === Cards Section === */
+.cards-section {
+    margin-top: 8px;
+}
+
+.cards-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.cards-section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards-region-label {
+    font-size: 0.8rem;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    background: rgba(6, 182, 212, 0.1);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+}
+
+/* === Indicator Card === */
+.indicator-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: var(--transition);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.indicator-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--card-accent, var(--accent-blue));
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.indicator-card:hover {
+    border-color: var(--card-accent, var(--accent-blue));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.indicator-card:hover::before {
+    opacity: 1;
+    height: 4px;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.card-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: right;
+    max-width: 70%;
+}
+
+.card-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.card-value.no-data {
+    color: var(--text-muted);
+    font-size: 1.4rem;
+}
+
+.card-unit {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.card-region-name {
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+/* === Multi-region cards grid (when "Semua" selected) === */
+.region-group {
+    margin-bottom: 28px;
+}
+
+.region-group-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+
+.region-group-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.region-group-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* === Loading === */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 0.8s ease-in-out infinite;
+}
+
+.loading-text {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* === Footer === */
+.footer {
+    text-align: center;
+    padding: 20px 32px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    .map-container-wrapper {
+        grid-template-columns: 1fr 280px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner { padding: 12px 16px; }
+    .filter-bar-inner { padding: 12px 16px; }
+    .main-content { padding: 16px; }
+
+    .map-container-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 360px 200px 200px;
+        height: auto;
+    }
+
+    .map-main { grid-row: auto; }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group select {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title h1 { font-size: 1rem; }
+    .filter-bar-inner { gap: 10px; }
+    .card-value { font-size: 1.5rem; }
+}
+
+/* === Custom Map Tooltip === */
+.region-tooltip {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    box-shadow: var(--shadow) !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Remove default Leaflet tooltip arrow */
+.leaflet-tooltip-left::before,
+.leaflet-tooltip-right::before,
+.leaflet-tooltip-top::before,
+.leaflet-tooltip-bottom::before {
+    display: none !important;
+}

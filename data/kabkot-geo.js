@@ -1,3 +1,4 @@
+const KABKOT_GEOJSON = 
 {
   "type": "FeatureCollection",
   "name": "kabkot_2100",
@@ -760907,4 +760908,4 @@
       }
     }
   ]
-}
+};

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Strategis - BPS Provinsi Kepulauan Riau</title>
+    <meta name="description" content="Dashboard indikator strategis pembangunan Provinsi Kepulauan Riau berdasarkan data BPS.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS (Local for Offline) -->
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+    
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Memuat Dashboard...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <img src="assets/images/logo-bps.png" alt="Logo BPS" class="header-logo">
+            <div class="header-title">
+                <h1>Dashboard Strategis</h1>
+                <p>Provinsi Kepulauan Riau</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="filter-bar-inner">
+            <div class="filter-group">
+                <label>Tahun</label>
+                <select id="filter-tahun"></select>
+            </div>
+            <div class="filter-group">
+                <label>Triwulan</label>
+                <select id="filter-triwulan">
+                    <option value="tw1">Triwulan I</option>
+                    <option value="tw2">Triwulan II</option>
+                    <option value="tw3">Triwulan III</option>
+                    <option value="tw4" selected>Triwulan IV</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Provinsi</label>
+                <select id="filter-provinsi">
+                    <option value="2100" selected>Kepulauan Riau</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Kabupaten / Kota</label>
+                <select id="filter-kabkot">
+                    <option value="semua">Semua Kabupaten/Kota</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="map-section-title">
+                🗺️ Peta Wilayah Kepulauan Riau
+            </div>
+            <div class="map-container-wrapper">
+                <div class="map-main">
+                    <div id="map-main" style="width:100%;height:100%;"></div>
+                </div>
+                <div class="map-natuna">
+                    <span class="map-label">NATUNA</span>
+                    <div id="map-natuna" style="width:100%;height:100%;"></div>
+                </div>
+                <div class="map-anambas">
+                    <span class="map-label">ANAMBAS</span>
+                    <div id="map-anambas" style="width:100%;height:100%;"></div>
+                </div>
+            </div>
+            <!-- Legend -->
+            <div class="map-legend" id="map-legend"></div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="cards-section">
+            <div class="cards-section-header">
+                <div class="cards-section-title">📊 Indikator Strategis</div>
+                <div class="cards-region-label" id="cards-region-label">Semua Kabupaten/Kota</div>
+            </div>
+            <div id="cards-container"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Sumber Data: Badan Pusat Statistik Provinsi Kepulauan Riau &bull; Dashboard Strategis &copy; 2024
+    </footer>
+
+    <!-- Scripts (Local for Offline) -->
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="data/kabkot-geo.js"></script>
+    <script src="data/kepri-data.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
