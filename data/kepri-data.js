@@ -40,7 +40,7 @@ const INDICATOR_DATA = [
             ipg: 91.61,
             kemiskinan: 5.16,
             gini_ratio: null,
-            inflasi: 3.12
+            inflasi: -0.67
         }
     },
     {
@@ -130,7 +130,7 @@ const INDICATOR_DATA = [
             ipg: 95.67,
             kemiskinan: 3.81,
             gini_ratio: null,
-            inflasi: 2.89
+            inflasi: -0.04
         }
     },
     {
@@ -148,7 +148,7 @@ const INDICATOR_DATA = [
             ipg: 96.12,
             kemiskinan: 5.96,
             gini_ratio: null,
-            inflasi: 3.45
+            inflasi: -0.06
         }
     }
 ];
