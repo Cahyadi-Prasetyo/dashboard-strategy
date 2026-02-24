@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // === Filter Initialization ===
 function initFilters() {
-    // Tahun filter (10 years back from current year)
+    // Tahun filter (Dynamic from current year down to 2008)
     const tahunSelect = document.getElementById('filter-tahun');
     const currentYear = new Date().getFullYear();
 
-    for (let y = currentYear; y >= currentYear - 10; y--) {
+    for (let y = currentYear; y >= 2008; y--) {
         const opt = document.createElement('option');
         opt.value = y;
         opt.textContent = y;
